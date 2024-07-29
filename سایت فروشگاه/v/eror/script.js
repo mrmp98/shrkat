@@ -1,0 +1,1 @@
+var tlash = document.querySelector('#try').addEventListener('click' , function(){window.location.href = '#'})
