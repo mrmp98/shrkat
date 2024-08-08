@@ -1,0 +1,51 @@
+ <?php
+ require_once __DIR__ . '/../../c/acc.php';
+   
+ ?>
+ <!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <div id="mather">
+        <div id="madar_icone">
+          <i  class="bi bi-person-video"></i> 
+        </div>
+        <div id="user_name">
+        <div>user name</div>
+        <div id="user_1name">user name</div>
+        <br>
+        <br>
+        <div>emil</div>
+        <div id="emil_1">emil</div>
+        <br>
+        <br>
+        <div>password</div>
+        <div id="pass">password</div>
+        <br>
+        <br>
+        <div>semat</div>
+        <div id="semat">phone</div>
+        <br>
+        <br>
+        <div>bracdaye</div>
+        <div id="brac_daye">bracdaye</div>
+        <br>
+
+      </div> 
+       <script src="../../c/EROR.js"></script>
+      <div id="dokme">
+       <div class="dokme_ha"><a href="../mosharekat/index.php"><button class="btn">مشارکت ها  </button></div> </a>
+       <div class="dokme_ha"><a href="../syt/index.html"><button class="btn">بازگشت به  سایت  </button></div> </a>
+    </div>
+  </div>
+  
+</body>
+</html>
