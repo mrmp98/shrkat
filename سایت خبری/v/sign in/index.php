@@ -1,12 +1,14 @@
-<!-- <?php require_once __DIR__ . '/../../../سایت خبری/c/vorod.php'; ?> -->
+<?php require_once __DIR__ . '/../../../سایت خبری/c/vorod.php'; ?>
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>sign in</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+
 <body> <!-- partial:index.partial.html -->
     <section> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
         <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
@@ -51,14 +53,14 @@
                     </div>
                     <br>
                     <div class="inputBox">
-                        <input id="pass"  type="password" name="password" required> <i>Password</i>
+                        <input id="pass" type="password" name="password" required> <i>Password</i>
                         <div id="cheshm">
-                            <p  class="bi bi-eye-fill" >
-                        </p>
-                    </div>
+                            <p class="bi bi-eye-fill">
+                            </p>
+                        </div>
                     </div>
                     <br>
-                    <div  id="passwordLength" style="color: white;">تعداد کارکتر </div>
+                    <div id="passwordLength  " style="color: white;">تعداد کارکتر </div>
 
                     <u>
                         <div class="links"> <a href="../sign up/singup.php">Signup</a>
@@ -74,18 +76,6 @@
     </section> <!-- partial -->
     <script src="../../c/EROR.js"></script>
     <script src="script.js"></script>
-    <script>   
-    
-     document.querySelector('#pass').addEventListener('input', function() {
-    let passwordLength = this.value.length;
-    console.log('ok') ; 
-    let passwordLengthElement = document.querySelector('#passwordLength');
-
-    passwordLengthElement.textContent = `تعداد کاراکتر: ${passwordLength}`;
-    passwordLengthElement.style.transition = 'all 0.3s ease';
-});
-
-
-    </script>
 </body>
+`
 </html>

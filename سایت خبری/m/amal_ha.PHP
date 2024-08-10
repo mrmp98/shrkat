@@ -28,6 +28,7 @@ class amal_ha extends connect
         if (empty($table_name) || empty($value) || empty($column_name)) {
             echo "نام جدول، مقدار یا نام ستون نمی‌تواند خالی باشد.";
             return false;
+
         }
     
         
@@ -67,14 +68,17 @@ class amal_ha extends connect
             echo "Connection failed: " . $e->getMessage();
         }
     }
-    public function add_to_abot($table_name, $name,$email, $phon = null, $semat, $count = null, $tavalod, $edit = null)
+    public function add_to_abot($table_name, $name , $password ,$email, $phon, $semat)
     {
         try {
-            $sql = "INSERT INTO $table_name (user, password, phone, semat, count_post, brac_daye, count_edit) VALUES (:user, :password, :phone, :semat, :count, :tavalod, :edit)";
+            $sql = "INSERT INTO $table_name (user , password, semat, email  , phone) VALUES (:user, :password, :phone, :semat , :email)";
             $stmt = $this->conn->prepare($sql);
             $stmt->bindParam(':user', $name);
-            $stmt->bindParam(':password', $email);
+            $stmt->bindParam(':password', $password);
+            $stmt->bindParam(':email', $email);
             $stmt->bindParam(':phone', $phon); 
+            $stmt->bindParam(':semat', $semat); 
+
             if ($stmt->execute()) {
                 echo "اطلاعات با موفقیت وارد شد.";
             } else {

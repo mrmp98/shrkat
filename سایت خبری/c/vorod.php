@@ -16,13 +16,13 @@ class qw extends amal_ha
     if (isset($_POST['submit'])) {
       if (!empty($_POST['username'])) { 
           if ($this->chek('abote', $_POST['password'], 'passsword') == true && $this->chek('abote', $_POST['username'], 'user') == true) {
-            $_SESSION['filename'] = 'vorod' ; 
-            $_SESSION['username'] = $_POST['username'] ; 
-            $_SESSION['passsword'] = $_POST['passsword'] ; 
-            $_SESSION['semat'] = 'کاربر عادی ' ; 
-            $_SESSION['emil'] = 'وارد نکردید ' ; 
+            // $_SESSION['filename'] = 'vorod' ; 
+            // $_SESSION['username'] = $_POST['username'] ; 
+            // $_SESSION['passsword'] = $_POST['passsword'] ; 
+            // $_SESSION['semat'] = 'کاربر عادی ' ; 
+            // $_SESSION['emil'] = 'وارد نکردید ' ; 
             
-            echo '<script>alert("اطلاعات شما ثبت نشده است")</script>';
+            echo '<script>alert("اطلاعات شما ثبت شده است")</script>';
               
               sleep(2); 
               header('Location: ../acc/acc.php');
@@ -48,19 +48,24 @@ class qw extends amal_ha
     if (isset($_POST['submit'])) {  
       if(!empty($_POST['name'])){
 
-        $this->add_to_abot('abote', $_POST['name'],$_POST['password'], '08647342267', 1, '1', $_POST['date'] , 1)  ; 
-        $_SESSION['filename'] = 'sbtnam' ; 
-        $_SESSION['name'] = $_POST['name'] ; 
-        $_SESSION['password'] = $_POST['password'] ; 
-        $_SESSION['bracday']= $_POST['date'] ; 
-        $_SESSION['semat'] = 'کاربر عادی ' ; 
-        $_SESSION['emil'] = 'وارد نکردید ' ; 
+        $this->add_to_abot('abote', $_POST['name'],$_POST['password'], $_POST['email'],  $_POST['phone'] , '1')  ; 
+        // $_SESSION['filename'] = 'sbtnam' ; 
+        // $_SESSION['name'] = $_POST['name'] ; 
+        // $_SESSION['password'] = $_POST['password'] ; 
+        // $_SESSION['bracday']= $_POST['date'] ; 
+        // $_SESSION['semat'] = 'کاربر عادی ' ; 
+        // $_SESSION['emil'] = 'وارد نکردید ' ; 
         echo '<script>alert("اطلعات شما ذخیره شد ")'; 
-        // test 
+        sleep(2);
+        header('Location: ../sign up/singup.php');
+        exit(); 
       }
-      // xss
-     
+      
     }
   }
 }
 $qw = new qw();
+
+// xss
+// test
+// sql
