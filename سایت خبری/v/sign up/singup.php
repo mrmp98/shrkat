@@ -37,6 +37,10 @@
                             <div class="col-md-12">
                                 <input type="text" class="form-control" name="email" placeholder="yor email" required>
                             </div>
+                            <br>
+                            <div>
+                                <input type="submit" value="click" name="submit">
+                            </div>
                         </form>
                         <a href="../sign in/index.php">singin<a>
                     </div>

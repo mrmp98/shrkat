@@ -2,8 +2,10 @@
 <?php 
  session_start() ; 
  require_once __DIR__ . '/../m/amal_ha.PHP';
-class qw extends amal_ha
-{
+ require_once __DIR__ . '/amniyat.php';
+class qw extends amal_ha   
+{ 
+  use  amniyat ; 
   public function __construct()
   {
     parent::__construct() ; 
@@ -14,8 +16,9 @@ class qw extends amal_ha
   {
     
     if (isset($_POST['submit'])) {
-      if (!empty($_POST['username'])) { 
-          if ($this->chek('abote', $_POST['password'], 'passsword') == true && $this->chek('abote', $_POST['username'], 'user') == true) {
+      if (!empty($_POST['username'])) {
+      
+          if ($this->chek('abote ', $this->xss($_POST['password'] ,FILTER_SANITIZE_STRING) , 'password') == true && $this->chek('abote', $this->xss($_POST['username'],FILTER_SANITIZE_STRING), 'user') == true) {
             // $_SESSION['filename'] = 'vorod' ; 
             // $_SESSION['username'] = $_POST['username'] ; 
             // $_SESSION['passsword'] = $_POST['passsword'] ; 
@@ -48,7 +51,8 @@ class qw extends amal_ha
     if (isset($_POST['submit'])) {  
       if(!empty($_POST['name'])){
 
-        $this->add_to_abot('abote', $_POST['name'],$_POST['password'], $_POST['email'],  $_POST['phone'] , '1')  ; 
+        $this->add_to_abot('abote', $this->xss($_POST['name'],FILTER_SANITIZE_SPECIAL_CHARS)  , $this->xss($_POST['password'] , FILTER_SANITIZE_SPECIAL_CHARS) , $this->xss($_POST['email'] , FILTER_VALIDATE_EMAIL )  , $this->xss($_POST['phone']  , FILTER_SANITIZE_NUMBER_INT ), '1')  ;
+
         // $_SESSION['filename'] = 'sbtnam' ; 
         // $_SESSION['name'] = $_POST['name'] ; 
         // $_SESSION['password'] = $_POST['password'] ; 
@@ -57,7 +61,7 @@ class qw extends amal_ha
         // $_SESSION['emil'] = 'وارد نکردید ' ; 
         echo '<script>alert("اطلعات شما ذخیره شد ")'; 
         sleep(2);
-        header('Location: ../sign up/singup.php');
+        header('Location: ../acc/acc.php');
         exit(); 
       }
       
@@ -66,6 +70,4 @@ class qw extends amal_ha
 }
 $qw = new qw();
 
-// xss
 // test
-// sql

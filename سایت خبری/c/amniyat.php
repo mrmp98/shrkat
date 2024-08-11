@@ -1,12 +1,12 @@
 <?php 
- class qw
+ 
+ 
+ trait  amniyat 
  {
-    function xss($user, $password, $phon = null, $tavalod = null){
-        $filtered_user = htmlspecialchars(filter_input(INPUT_POST, 'user', FILTER_SANITIZE_STRING));
-        $filtered_password = htmlspecialchars(filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING));
-        $filtered_phon = htmlspecialchars(filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_STRING));
-        $filtered_tavalod = htmlspecialchars(filter_input(INPUT_POST, 'daye', FILTER_SANITIZE_STRING));
-        return array($filtered_user, $filtered_password, $filtered_phon, $filtered_tavalod);
+
+    function xss($r , $noesh){
+       
+     return   htmlspecialchars(filter_var($r, $noesh));
     }
     public function rams_gozari ($data){
         $method = 'aes-256-gcm';
@@ -27,4 +27,4 @@
     }
 }
 
-$e = new qw();
+

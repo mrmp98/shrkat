@@ -19,28 +19,27 @@ class amal_ha extends connect
 { 
     public function __construct() {
         parent::__construct(); 
-        
+    
     }
 
     public function chek($table_name, $value, $column_name) {
-        
-     
+            
         if (empty($table_name) || empty($value) || empty($column_name)) {
             echo "نام جدول، مقدار یا نام ستون نمی‌تواند خالی باشد.";
             return false;
 
         }
-    
+      
         
     
         try {
             
-            $sql = "SELECT COUNT(*) AS count FROM `$table_name` WHERE `$column_name` = :value"; 
+            $sql = "SELECT COUNT(*) AS count FROM $table_name WHERE $column_name = :value"; 
             
             $stmt = $this->conn->prepare($sql); 
             $stmt->bindValue(':value', $value); 
+              
             $stmt->execute();
-            
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
             
             
@@ -135,6 +134,6 @@ class amal_ha extends connect
     }
 }
 
-$amal_ha = new amal_ha(); 
+
 
 

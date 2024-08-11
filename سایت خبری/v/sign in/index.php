@@ -60,7 +60,7 @@
                         </div>
                     </div>
                     <br>
-                    <div id="passwordLength  " style="color: white;">تعداد کارکتر </div>
+                    <div id="passwordLength" style="color: white;">تعداد کارکتر </div>
 
                     <u>
                         <div class="links"> <a href="../sign up/singup.php">Signup</a>
@@ -72,10 +72,12 @@
                 </form>
             </div>
         </div>
-        </div>
+        
     </section> <!-- partial -->
     <script src="../../c/EROR.js"></script>
     <script src="script.js"></script>
+
 </body>
 `
+
 </html>
