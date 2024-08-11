@@ -20,7 +20,7 @@
                     <div class="form-items">
                         <h3>signup</h3>
                         <p>اطلعات خود را وارد کنید </p>
-                        <form class="requires-validation" novalidate>
+                        <form class="requires-validation" method= 'post' novalidate>
                             <div class="col-md-12">
                                 <input class="form-control" type="text" name="name" placeholder="Full Name" required>
 
