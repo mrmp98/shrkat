@@ -27,14 +27,14 @@ class qw extends amal_ha
             
             echo '<script>alert("اطلاعات شما ثبت شده است")</script>';
               
-              sleep(2); 
+               
               header('Location: ../acc/acc.php');
               exit(); 
           } else {
               
                 
                 echo "<script>alert('اطلعات شما ثبت نشده است ')</script>";
-              sleep(2);
+              
               header('Location: ../sign up/singup.php');
               exit(); 
           }
@@ -45,7 +45,7 @@ class qw extends amal_ha
       echo '<script>alert("فرم ارسال نشده است")</script>';
   }
   
-  }
+  }bnvb         
   public function sbtnam()
   {
     if (isset($_POST['submit'])) {  
@@ -53,14 +53,14 @@ class qw extends amal_ha
 
         $this->add_to_abot('abote', $this->xss($_POST['name'],FILTER_SANITIZE_SPECIAL_CHARS)  , $this->xss($_POST['password'] , FILTER_SANITIZE_SPECIAL_CHARS) , $this->xss($_POST['email'] , FILTER_VALIDATE_EMAIL )  , $this->xss($_POST['phone']  , FILTER_SANITIZE_NUMBER_INT ), '1')  ;
 
-        // $_SESSION['filename'] = 'sbtnam' ; 
-        // $_SESSION['name'] = $_POST['name'] ; 
-        // $_SESSION['password'] = $_POST['password'] ; 
-        // $_SESSION['bracday']= $_POST['date'] ; 
-        // $_SESSION['semat'] = 'کاربر عادی ' ; 
-        // $_SESSION['emil'] = 'وارد نکردید ' ; 
+        $_SESSION['filename'] = 'sbtnam' ; 
+        $_SESSION['name'] = $_POST['name'] ; 
+        $_SESSION['password'] = $_POST['password'] ; 
+        $_SESSION['bracday']= $_POST['date'] ; 
+        $_SESSION['semat'] = 'کاربر عادی ' ; 
+        $_SESSION['emil'] = 'وارد نکردید ' ; 
         echo '<script>alert("اطلعات شما ذخیره شد ")'; 
-        sleep(2);
+        
         header('Location: ../acc/acc.php');
         exit(); 
       }
