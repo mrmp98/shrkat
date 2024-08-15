@@ -1,7 +1,4 @@
- <?php
- require_once __DIR__ . '/../../c/acc.php';
-   
- ?>
+ 
  <!DOCTYPE html>
 <html lang="en">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -20,23 +17,23 @@
         </div>
         <div id="user_name">
         <div>user name</div>
-        <div id="user_1name">user name</div>
+        <div id="user_1name"></div>
         <br>
         <br>
         <div>emil</div>
-        <div id="emil_1">emil</div>
+        <div id="emil_1"></div>
         <br>
         <br>
         <div>password</div>
-        <div id="pass">password</div>
+        <div id="pass"></div>
         <br>
         <br>
         <div>semat</div>
-        <div id="semat">phone</div>
+        <div id="semat"></div>
         <br>
         <br>
-        <div>bracdaye</div>
-        <div id="brac_daye">bracdaye</div>
+        <div>phone</div>
+        <div id="phone"></div>
         <br>
 
       </div> 
@@ -45,7 +42,11 @@
        <div class="dokme_ha"><a href="../mosharekat/index.php"><button class="btn">مشارکت ها  </button></div> </a>
        <div class="dokme_ha"><a href="../syt/index.html"><button class="btn">بازگشت به  سایت  </button></div> </a>
     </div>
-  </div>
-  
+  </div>  
 </body>
 </html>
+<?php
+
+ require_once __DIR__ . '/../../c/acc.php';
+   
+ ?>

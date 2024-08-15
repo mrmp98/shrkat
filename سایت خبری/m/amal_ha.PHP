@@ -105,13 +105,12 @@ class amal_ha extends connect
             echo "Connection failed: " . $e->getMessage();
         }     
     }
-    public function selekt( $table_name , $param) {
-        $sql = "SELECT * FROM $table_name";
-        $result = $this->conn->query($sql);
-
-
+    public function selekt( $table_name , $param , $r = null) {
+        if(basename($_SERVER['SCRIPT_FILENAME']) == 'acc.php'){
             
-
+            $sql = "SELECT 'user', 'password', 'semat','email', 'phone' FROM $table_name WHERE $param = $r";
+            $result = $this->conn->query($sql);
+        }
     } 
     public  function update($table_name , $user= null , $seen = null , $mtn = null , $edit= null)
     {

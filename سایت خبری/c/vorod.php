@@ -45,7 +45,7 @@ class qw extends amal_ha
       echo '<script>alert("فرم ارسال نشده است")</script>';
   }
   
-  }bnvb         
+  }
   public function sbtnam()
   {
     if (isset($_POST['submit'])) {  
@@ -56,9 +56,9 @@ class qw extends amal_ha
         $_SESSION['filename'] = 'sbtnam' ; 
         $_SESSION['name'] = $_POST['name'] ; 
         $_SESSION['password'] = $_POST['password'] ; 
-        $_SESSION['bracday']= $_POST['date'] ; 
+        $_SESSION['phone']  = $_POST['phone']; 
         $_SESSION['semat'] = 'کاربر عادی ' ; 
-        $_SESSION['emil'] = 'وارد نکردید ' ; 
+        $_SESSION['emil'] = $_POST['email'] ; 
         echo '<script>alert("اطلعات شما ذخیره شد ")'; 
         
         header('Location: ../acc/acc.php');
@@ -69,5 +69,3 @@ class qw extends amal_ha
   }
 }
 $qw = new qw();
-
-// test
