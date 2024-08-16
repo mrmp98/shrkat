@@ -71,7 +71,7 @@ class amal_ha extends connect
     public function add_to_abot($table_name, $name, $password, $email, $phon, $semat)
     {
         try {
-            $sql = "INSERT INTO $table_name (user , password, semat, email  , phone) VALUES (:user, :password, :phone, :semat , :email)";
+            $sql = "INSERT INTO $table_name (user , password, semat, email  , phone) VALUES (:user, :password,:semat , :email , :phone)";
             $stmt = $this->conn->prepare($sql);
             $stmt->bindParam(':user', $name);
             $stmt->bindParam(':password', $password);
@@ -116,14 +116,19 @@ class amal_ha extends connect
     {
         if (basename($_SERVER['SCRIPT_FILENAME']) == 'acc.php') 
         {
+            // اجرای کوئری SQL
+$stmt = $this->conn->prepare("SELECT user, password, semat, email, phone FROM abote WHERE user = '123' AND password = '123'");
+$stmt->execute();
 
-            $sql = "SELECT 'user', 'password', 'semat','email', 'phone' FROM $table_name WHERE 'user' = $r and 'password' = $r2";
-            $v =   $this->conn->query($sql);
-            $v->execute();
-            return $v ; 
-            // this is boog 
+// خواندن داده‌های بازگشتی
+$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+// چاپ داده‌های بازگشتی
+return $result;
+
         }
     }
+    
     public  function update($table_name, $user = null, $seen = null, $mtn = null, $edit = null)
     {
         try 

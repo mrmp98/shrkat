@@ -9,8 +9,8 @@ class qw extends amal_ha
   public function __construct()
   {
     parent::__construct() ; 
-     echo (basename($_SERVER['SCRIPT_FILENAME']) == 'index.php') ? $this->vorod() : $this->sbtnam() ;
-  
+      (basename($_SERVER['SCRIPT_FILENAME']) == 'index.php') ? $this->vorod() : $this->sbtnam() ;
+      $this->conn = null ; 
   }
   public function  vorod()
   {

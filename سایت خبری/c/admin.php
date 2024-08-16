@@ -7,7 +7,9 @@
     {
         parent::__construct() ;
        
-         echo  (substr(($_SERVER['SCRIPT_FILENAME']), -11 )== 'c/admin.php')? $this->user()  : $this->admin() ; 
+           (substr(($_SERVER['SCRIPT_FILENAME']), -11 )== 'c/admin.php')? $this->user()  : $this->admin() ; 
+       $this->conn = null ; 
+
     }
     public function js($element , $dastor)
     {
