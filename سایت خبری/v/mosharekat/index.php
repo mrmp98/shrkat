@@ -20,7 +20,7 @@ session_start();
 
     <div id="mama">
         <table>
-            <tr>
+            <tr>                  
                 <th> گزینه ها </th>
                 <th>تعداد سین </th>
                 <th>تعداد ادیت </th>
