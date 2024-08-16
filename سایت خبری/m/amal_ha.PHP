@@ -1,13 +1,16 @@
 <?php
-class connect {
+class connect
+{
     public $servername = 'localhost';
     public $username = 'root';
     public $password = '';
-    public $conn; 
+    public $conn;
 
-    public function __construct() {
-        try {
-            
+    public function __construct()
+    {
+        try 
+        {
+
             $this->conn = new PDO("mysql:host=$this->servername;dbname=froshgah", $this->username, $this->password);
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
@@ -16,42 +19,40 @@ class connect {
     }
 }
 class amal_ha extends connect
-{ 
-    public function __construct() {
-        parent::__construct(); 
-    
+{
+    public function __construct()
+    {
+        parent::__construct();
     }
 
-    public function chek($table_name, $value, $column_name) {
-            
-        if (empty($table_name) || empty($value) || empty($column_name)) {
+    public function chek($table_name, $value, $column_name)
+    {
+
+        if (empty($table_name) || empty($value) || empty($column_name))
+         {
             echo "نام جدول، مقدار یا نام ستون نمی‌تواند خالی باشد.";
             return false;
-
         }
-      
-        
-    
+
+
+
         try {
-            
-            $sql = "SELECT COUNT(*) AS count FROM $table_name WHERE $column_name = :value"; 
-            
-            $stmt = $this->conn->prepare($sql); 
-            $stmt->bindValue(':value', $value); 
-              
+
+            $sql = "SELECT COUNT(*) AS count FROM $table_name WHERE $column_name = :value";
+
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bindValue(':value', $value);
+
             $stmt->execute();
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
-            
-            
-            return isset($row['count']) && $row['count'] > 0; 
+
+
+            return isset($row['count']) && $row['count'] > 0;
         } catch (PDOException $e) {
             echo "خطا در اجرای پرس و جو: " . $e->getMessage();
             return false;
         }
     }
-        
-    
-    
     public function dell($table_name, $id)
     {
         try {
@@ -67,7 +68,7 @@ class amal_ha extends connect
             echo "Connection failed: " . $e->getMessage();
         }
     }
-    public function add_to_abot($table_name, $name , $password ,$email, $phon, $semat)
+    public function add_to_abot($table_name, $name, $password, $email, $phon, $semat)
     {
         try {
             $sql = "INSERT INTO $table_name (user , password, semat, email  , phone) VALUES (:user, :password, :phone, :semat , :email)";
@@ -75,64 +76,74 @@ class amal_ha extends connect
             $stmt->bindParam(':user', $name);
             $stmt->bindParam(':password', $password);
             $stmt->bindParam(':email', $email);
-            $stmt->bindParam(':phone', $phon); 
-            $stmt->bindParam(':semat', $semat); 
+            $stmt->bindParam(':phone', $phon);
+            $stmt->bindParam(':semat', $semat);
 
-            if ($stmt->execute()) {
+            if ($stmt->execute()) 
+            {
                 echo "اطلاعات با موفقیت وارد شد.";
-            } else {
+            } else 
+            {
                 echo "خطا در وارد کردن اطلاعات: " . $stmt->errorInfo();
             }
         } catch (PDOException $e) {
             echo "Connection failed: " . $e->getMessage();
         }
     }
-    public function add_to_post($table_name , $user , $seen , $mtn , $edit)
+    public function add_to_post($table_name, $user, $seen, $mtn, $edit)
     {
-        try {
+        try 
+        {
             $sql = "INSERT INTO $table_name (user, seen, mtn, edit) VALUES (:user, :seen, :mtn, :edit)";
             $stmt = $this->conn->prepare($sql);
             $stmt->bindParam(':user', $user);
-            $stmt->bindParam(':seen', $seen); 
+            $stmt->bindParam(':seen', $seen);
             $stmt->bindParam(':mtn', $mtn);
-            $stmt->bindParam(':edit', $edit); 
-            if ($stmt->execute()) {
+            $stmt->bindParam(':edit', $edit);
+            if ($stmt->execute())
+            {
                 echo "اطلاعات با موفقیت وارد شد.";
-            } else {
+            } else
+             {
                 echo "خطا در وارد کردن اطلاعات: " . $stmt->errorInfo();
             }
-        } catch (PDOException $e) {
+        } catch (PDOException $e) 
+        {
             echo "Connection failed: " . $e->getMessage();
-        }     
+        }
     }
-    public function selekt( $table_name , $param , $r = null) {
-        if(basename($_SERVER['SCRIPT_FILENAME']) == 'acc.php'){
-            
-            $sql = "SELECT 'user', 'password', 'semat','email', 'phone' FROM $table_name WHERE $param = $r";
-            $result = $this->conn->query($sql);
-        }
-    } 
-    public  function update($table_name , $user= null , $seen = null , $mtn = null , $edit= null)
+    public function selekt($table_name, $r = null, $r2 = null)
     {
-        try {
+        if (basename($_SERVER['SCRIPT_FILENAME']) == 'acc.php') 
+        {
+
+            $sql = "SELECT 'user', 'password', 'semat','email', 'phone' FROM $table_name WHERE 'user' = $r and 'password' = $r2";
+            $v =   $this->conn->query($sql);
+            $v->execute();
+            return $v ; 
+            // this is boog 
+        }
+    }
+    public  function update($table_name, $user = null, $seen = null, $mtn = null, $edit = null)
+    {
+        try 
+        {
             $sql = "INSERT INTO $table_name (user, seen, mtn, edit) VALUES (:user, :seen, :mtn, :edit)";
             $stmt = $this->conn->prepare($sql);
             $stmt->bindParam(':user', $user);
-            $stmt->bindParam(':seen', $seen); 
+            $stmt->bindParam(':seen', $seen);
             $stmt->bindParam(':mtn', $mtn);
-            $stmt->bindParam(':edit', $edit); 
-            if ($stmt->execute()) {
+            $stmt->bindParam(':edit', $edit);
+            if ($stmt->execute()) 
+            {
                 echo "اطلاعات با موفقیت وارد شد.";
-            } else {
+            } else 
+            {
                 echo "خطا در وارد کردن اطلاعات: " . $stmt->errorInfo();
             }
-        } catch (PDOException $e) {
+        } catch (PDOException $e) 
+        {
             echo "Connection failed: " . $e->getMessage();
         }
-        
     }
 }
-
-
-
-

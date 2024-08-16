@@ -15,30 +15,28 @@ class qw extends amal_ha
   public function  vorod()
   {
     
-    if (isset($_POST['submit'])) {
-      if (!empty($_POST['username'])) {
+    if (isset($_POST['submit'])) 
+    {
+      if (!empty($_POST['username'])) 
+      {
       
-          if ($this->chek('abote ', $this->xss($_POST['password'] ,FILTER_SANITIZE_STRING) , 'password') == true && $this->chek('abote', $this->xss($_POST['username'],FILTER_SANITIZE_STRING), 'user') == true) {
-            // $_SESSION['filename'] = 'vorod' ; 
-            // $_SESSION['username'] = $_POST['username'] ; 
-            // $_SESSION['passsword'] = $_POST['passsword'] ; 
-            // $_SESSION['semat'] = 'کاربر عادی ' ; 
-            // $_SESSION['emil'] = 'وارد نکردید ' ; 
-            
-            echo '<script>alert("اطلاعات شما ثبت شده است")</script>';
-              
-               
+          if ($this->chek('abote ', $this->xss($_POST['password'] ,FILTER_SANITIZE_STRING) , 'password') == true && $this->chek('abote', $this->xss($_POST['username'],FILTER_SANITIZE_STRING), 'user') == true) 
+          {
+              $_SESSION['username'] = $_POST['username'];
+              $_SESSION['password'] = $_POST['password'];    
               header('Location: ../acc/acc.php');
               exit(); 
-          } else {
+          } else 
+          {
               
-                
+  
                 echo "<script>alert('اطلعات شما ثبت نشده است ')</script>";
               
               header('Location: ../sign up/singup.php');
               exit(); 
           }
-      } else {
+      } else 
+      {
           echo '<script>alert("لطفاً نام کاربری را وارد کنید")</script>';
       }
   } else {
@@ -48,8 +46,10 @@ class qw extends amal_ha
   }
   public function sbtnam()
   {
-    if (isset($_POST['submit'])) {  
-      if(!empty($_POST['name'])){
+    if (isset($_POST['submit']))
+     {  
+      if(!empty($_POST['name']))
+      {
 
         $this->add_to_abot('abote', $this->xss($_POST['name'],FILTER_SANITIZE_SPECIAL_CHARS)  , $this->xss($_POST['password'] , FILTER_SANITIZE_SPECIAL_CHARS) , $this->xss($_POST['email'] , FILTER_VALIDATE_EMAIL )  , $this->xss($_POST['phone']  , FILTER_SANITIZE_NUMBER_INT ), '1')  ;
 

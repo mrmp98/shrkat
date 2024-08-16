@@ -8,7 +8,8 @@
        
      return   htmlspecialchars(filter_var($r, $noesh));
     }
-    public function rams_gozari ($data){
+    public function rams_gozari ($data)
+    {
         $method = 'aes-256-gcm';
         $iv = openssl_random_pseudo_bytes(openssl_cipher_iv_length($method));
         $tag = null;
@@ -16,7 +17,8 @@
         return base64_encode($iv . $tag . $encrypted);
     }
     
-    public function ramz_goshaee (string $data){
+    public function ramz_goshaee (string $data)
+    {
         $method = 'aes-256-gcm';
         $data = base64_decode($data);
         $ivLength = openssl_cipher_iv_length($method);
