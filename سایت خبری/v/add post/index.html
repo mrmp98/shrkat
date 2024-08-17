@@ -10,7 +10,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
 </head>
-<body style="background-color: rgb(30, 37, 37);">
+<body >
     <div class="dropdown">
         <button type="button" id="y" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
           انتخاب موضوع
@@ -24,23 +24,13 @@
     <br>
     <br>
     <br>
-    <div style="display: flex; justify-content: center; align-items:center ;">
+    <div id="post">
         <form method="post">
             <textarea id="myTextarea" name="myTextarea" rows="20" cols="50"></textarea>
             <button name="submit" type="submit">ثبت خبر </button>
             <button>  <a href="../acc/../mosharekat/index.php">بازگشت </a></button>
         </form>
     </div>
-    <script>
-        var x = document.querySelectorAll('.dropdown-item');
-        var y = document.querySelector('#y');
-
-        x.forEach(item => {
-            item.addEventListener('click', function() {
-                let q = this.textContent;
-                y.innerHTML = q;
-            });
-        });
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>

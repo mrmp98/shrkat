@@ -18,24 +18,7 @@
         </div>
         <script>
         
-        document.querySelector('#try').addEventListener('click' , function(){
-            window.addEventListener('online' , function(){
-            const localshen = localStorage.getItem('locashen')
-            if(localshen){
-                window.location.href = localshen ; 
-                localStorage.removeItem ('locashen')
-            }
-        })
-        })
-        setInterval(function(){
-            window.addEventListener('online' , function(){
-            const localshen = localStorage.getItem('locashen')
-            if(localshen){
-                window.location.href = localshen ; 
-                localStorage.removeItem ('locashen')
-            }
-        })
-        },1000)
+      
 
         </script>
         <script src="script.js"></script>

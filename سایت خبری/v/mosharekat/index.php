@@ -16,7 +16,7 @@ session_start();
 
 <body>
     <p> <?php $_SESSION['name'] ?> عزیز خوش اومدی مشارکت های شما عبارت است از </p>
-    <div style="background-color: rgb(0, 0, 0);  font-size: 50px;"><a style="color: white" href="../add post/index.html"><i style="color: aliceblue;" class="bi bi-cloud-plus"></i> افزودن پست </a></div>
+    <div id="div"><a id="a" href="../add post/index.html"><i id="i2" class="bi bi-cloud-plus"></i> افزودن پست </a></div>
 
     <div id="mama">
         <table>
@@ -30,10 +30,10 @@ session_start();
             </tr>
             <tr>
               <th>
-             <a href="../add post/index.html"> <i style=" background-color:black ; color: wheat ;  margin-left:10%;" class="bi bi-pencil-fill"></i></a>
-              <i style=" background-color:black ; color: wheat ;  margin-left:10%;" class="bi bi-trash3"></i>
-             <a href="../add post/index.html"> <i style=" background-color:black ; color: wheat ;  margin-left:10%;" class="bi bi-cloud-plus-fill"></i></a>
-              <i style=" background-color:black ; color: wheat ;  margin-left:10%;" class="bi bi-eye-fill"></i>
+             <a href="../add post/index.html"> <i class="i" class="bi bi-pencil-fill"></i></a>
+              <i class="i" class="bi bi-trash3"></i>
+             <a href="../add post/index.html"> <i class="i" class="bi bi-cloud-plus-fill"></i></a>
+              <i class="i" class="bi bi-eye-fill"></i>
               </th>
               <th>x</th>
               <th>x</th>
@@ -48,7 +48,7 @@ session_start();
         <div>
             <button> <a href="../syt/index.html"> بازگشت به سایت </a>
             </button>
-            <button style="margin-left: 40%;"> <a href="../acc/acc.php"> بازگشت به اکانت </a></button>
+            <button id="back"> <a href="../acc/acc.php"> بازگشت به اکانت </a></button>
         </div>
     </div>
     <script src="script.js"></script>
