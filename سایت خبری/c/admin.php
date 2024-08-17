@@ -6,7 +6,7 @@
     public function __construct()
     {
         parent::__construct() ;
-       
+        
            (substr(($_SERVER['SCRIPT_FILENAME']), -11 )== 'c/admin.php')? $this->user()  : $this->admin() ; 
        $this->conn = null ; 
 
@@ -27,12 +27,7 @@
     }
     public function admin()
     { 
-        // $this->add_to_post() ; 
-        $this->del() ; 
-        $this->edit();
-    }
-    public function user()
-    {
+        $this->add_to_post() ; 
         $this->del() ; 
         $this->edit();
     }
