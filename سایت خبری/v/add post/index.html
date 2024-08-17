@@ -13,7 +13,7 @@
 <body >
     <div class="dropdown">
         <button type="button" id="y" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-          انتخاب موضوع
+           انتخاب موضوع
         </button>
         <ul class="dropdown-menu">
           <li class="dropdown-item">ورزشی</li>
@@ -26,11 +26,26 @@
     <br>
     <div id="post">
         <form method="post">
-            <textarea id="myTextarea" name="myTextarea" rows="20" cols="50"></textarea>
-            <button name="submit" type="submit">ثبت خبر </button>
-            <button>  <a href="../acc/../mosharekat/index.php">بازگشت </a></button>
+            <textarea id="myTextarea" name="myTextarea" rows="20" cols="50" placeholder="خبر خود را بنویسید"></textarea>
+            <div style="width: 200px; height: 40px; background-color: black; color: white;" id="submit" name="submit" type="">ثبت خبر</div >
+            <button><a href="../acc/../mosharekat/index.php">بازگشت</a></button>
         </form>
     </div>
+    <script>
+        var submit = document.querySelector("#submit");
+        submit.addEventListener("click", function() {
+            var myTextarea = document.querySelector("#myTextarea").value;
+            var collapss = document.querySelector('#y').innerHTML ;
+              
+            console.log(collapss.trim()) ;   
+            if(myTextarea.trim()=== '' || collapss.trim() == 'انتخاب موضوع'){
+                alert('لطفا تمام اینپوت هارا پر کنید ')
+            }else {
+                // <?php ?>
+            }
+        });
+    </script>
+    
     <script src="index.js"></script>
 </body>
 </html>
