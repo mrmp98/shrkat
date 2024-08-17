@@ -1,1 +1,28 @@
-body{background-color:#5f9ea0}#mama{background-color:#6f777e}table,td,th{border:1px solid #000;border-collapse:collapse}table{width:100%;background-color:azure}.bi-pencil-fill{margin-left:6%}#dokme{margin-left:30%;margin-top:50px}
+body {
+    background-color: #5f9ea0
+}
+
+#mama {
+    background-color: #6f777e
+}
+
+table,
+td,
+th {
+    border: 1px solid #000;
+    border-collapse: collapse
+}
+
+table {
+    width: 100%;
+    background-color: azure
+}
+
+.bi-pencil-fill {
+    margin-left: 6%
+}
+
+#dokme {
+    margin-left: 30%;
+    margin-top: 50px
+}

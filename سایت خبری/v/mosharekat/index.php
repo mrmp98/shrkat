@@ -16,7 +16,7 @@ session_start();
 
 <body>
     <p> <?php $_SESSION['name'] ?> عزیز خوش اومدی مشارکت های شما عبارت است از </p>
-    <div style="background-color: red; font-size: 50px;"><a href="../add post/index.html"><i style="background-color: black;" class="bi bi-cloud-plus"></i> افزودن پست </a></div>
+    <div style="background-color: rgb(0, 0, 0);  font-size: 50px;"><a style="color: white" href="../add post/index.html"><i style="color: aliceblue;" class="bi bi-cloud-plus"></i> افزودن پست </a></div>
 
     <div id="mama">
         <table>
@@ -30,9 +30,9 @@ session_start();
             </tr>
             <tr>
               <th>
-              <i style=" background-color:black ; color: wheat ;  margin-left:10%;" class="bi bi-pencil-fill"></i> 
+             <a href="../add post/index.html"> <i style=" background-color:black ; color: wheat ;  margin-left:10%;" class="bi bi-pencil-fill"></i></a>
               <i style=" background-color:black ; color: wheat ;  margin-left:10%;" class="bi bi-trash3"></i>
-              <i style=" background-color:black ; color: wheat ;  margin-left:10%;" class="bi bi-cloud-plus-fill"></i>
+             <a href="../add post/index.html"> <i style=" background-color:black ; color: wheat ;  margin-left:10%;" class="bi bi-cloud-plus-fill"></i></a>
               <i style=" background-color:black ; color: wheat ;  margin-left:10%;" class="bi bi-eye-fill"></i>
               </th>
               <th>x</th>
@@ -58,6 +58,3 @@ session_start();
 </body>
 
 </html>
-<!-- <i class="bi bi-trash3"></i> -->
-
-<!-- <i class="bi bi-pencil-fill"></i> -->
