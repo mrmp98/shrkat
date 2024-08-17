@@ -90,9 +90,9 @@ CREATE TABLE `titel` (
 --
 
 INSERT INTO `titel` (`id`, `name`, `mtn`) VALUES
-(1, 'ورزشی ', ''),
-(2, 'سیاسی ', ''),
-(3, 'خاورمیانه ', '');
+(1, 'ورزشی ', 'abc'),
+(2, 'سیاسی ', 'abc'),
+(3, 'خاورمیانه ', 'abc');
 
 --
 -- Indexes for dumped tables
