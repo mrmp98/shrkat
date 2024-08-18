@@ -15,7 +15,7 @@
     <div id="div"><a id="a" href="../add post/index.html"><i id="i2" class="bi bi-cloud-plus"></i> افزودن پست </a></div>
 
     <div id="mama">
-        <table>
+        <table id="mymediya">
             <tr>
                 <th> گزینه ها </th>
                 <th>تعداد سین </th>
@@ -41,11 +41,12 @@
     </div>
     <script src="sscript.js"></script>
     <script>
-        // document.querySelector('#ashghali').addEventListener('click', function() {
-        //     <?php 
-        //         // this is bog
-        //         ?>
-        // })
+        // this is bog
+        let table = document.getElementById('mymediya');
+    table.addEventListener('click', function(event) {
+        let cellValue = event.target.textContent;
+        console.log(cellValue);
+    });
     </script>
     <script src="../../c/EROR.js"></script>
 

@@ -11,13 +11,8 @@
        $this->conn = null ; 
 
     }
-     public function js( $ho , $jsCode) 
-  {
-    echo "<script>";
-    echo "" ; 
-    echo "</script>";
-  }  
-    public function del ()
+   
+    public function del ()  
     {
         // this is bog 
 
@@ -41,7 +36,7 @@
                     <th>" . $p[0][$i]['seen'] . "</th>
                     <th>". $p[0][$i]['edit'] . "</th>
                     <th>". 'ok'.  "</th>
-                    <th class='post'>". $p[0][$i]['mtn'] . "</th>
+                    <th  class='post'>". $p[0][$i]['mtn'] . "</th>
                     <th>". $p[0][$i]['titel'] . "</th>
                   </tr>";
         }
