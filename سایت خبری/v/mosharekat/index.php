@@ -1,5 +1,5 @@
 <?php
-//  require_once __DIR__ . '/../../c/admin.php';
+ require_once __DIR__ . '/../../c/admin.php';
 session_start();
 ?>
 <!DOCTYPE html>
@@ -15,7 +15,7 @@ session_start();
 </head>
 
 <body>
-    <p> <?php $_SESSION['name'] ?> عزیز خوش اومدی مشارکت های شما عبارت است از </p>
+    <p> <?php $_SESSION['username'] ?> عزیز خوش اومدی مشارکت های شما عبارت است از </p>
     <div id="div"><a id="a" href="../add post/index.html"><i id="i2" class="bi bi-cloud-plus"></i> افزودن پست </a></div>
 
     <div id="mama">
@@ -35,11 +35,11 @@ session_start();
              <a href="../add post/index.html"> <i class="i" class="bi bi-cloud-plus-fill"></i></a>
               <i class="i" class="bi bi-eye-fill"></i>
               </th>
-              <th>x</th>
-              <th>x</th>
-              <th>x</th>
-              <th>x</th>
-              <th>x</th>
+              <th id="th1">x</th>
+              <th id="th2">x</th>
+              <th id="th3">x</th>
+              <th id="th4">x</th>
+              <th id="th5">x</th>
             </tr>
 
         </table>
