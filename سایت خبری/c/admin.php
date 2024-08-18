@@ -11,18 +11,20 @@
        $this->conn = null ; 
 
     }
-    public function js($element , $dastor)
-    {
-        echo "<script >document.querySelector($element).addEventListener('click' , function(){$dastor})</script>" ; 
-    } 
+     public function js( $ho , $jsCode) 
+  {
+    echo "<script>";
+    echo "document.querySelector('$ho').innerHTML = '$jsCode'" ; 
+    echo "</script>";
+  }  
     public function del ()
     {
         $this->js('bi-trash3' , $this->dell() ) ; 
            
     }
-    public function edit ()
+    public function senn ()
     {
-        $this->js('bi-pencil-fill' , $this->update()) ; 
+        $this->js('bi-pencil-fill' , $this->selekt()) ; 
         
     }
     public function admin()
