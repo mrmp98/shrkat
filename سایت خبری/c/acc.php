@@ -34,9 +34,8 @@ class qw extends amal_ha
   public function vorod()
   {
     unset($_SESSION['filename']);
+    
   $t[] = ( $this->selekt('abote' , $_SESSION['username'], $_SESSION['password'])) ;
-
-     
     $this->ScriptCode('#user_1name' , $t[0]['user']);
     $this->ScriptCode('#emil_1', $t[0]['email']);
     $this->ScriptCode('#pass',   $t[0]['password']);

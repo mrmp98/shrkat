@@ -1,7 +1,3 @@
-<?php
-require_once __DIR__ . '/../../c/admin.php';
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +11,7 @@ session_start();
 </head>
 
 <body>
-    <p> <?php $_SESSION['username'] ?> عزیز خوش اومدی مشارکت های شما عبارت است از </p>
+    <p>  عزیز خوش اومدی مشارکت های شما عبارت است از </p>
     <div id="div"><a id="a" href="../add post/index.html"><i id="i2" class="bi bi-cloud-plus"></i> افزودن پست </a></div>
 
     <div id="mama">
@@ -28,19 +24,9 @@ session_start();
                 <th>پست </th>
                 <th>تایتل </th>
             </tr>
-            <tr>
-                <th>
-                    <a href="../add post/index.php"> <i class="i" class="bi bi-pencil-fill"></i></a>
-                    <i class="i" id="ashghali" class="bi bi-trash3"></i>
-                    <a href="../add post/index.php"> <i class="i" class="bi bi-cloud-plus-fill"></i></a>
-                    <i class="i" class="bi bi-eye-fill"></i>
-                </th>
-                <th id="th1">x</th>
-                <th id="th2">x</th>
-                <th id="th3">x</th>
-                <th id="th4">x</th>
-                <th id="th5">x</th>
-            </tr>
+            <?php 
+              $this->seen() ; 
+             ?>
 
         </table>
     </div>
@@ -53,14 +39,17 @@ session_start();
     </div>
     <script src="script.js"></script>
     <script>
-        document.querySelector('#ashghali').addEventListener('click', function() {
-            <?php 
-                // this is bog
-                ?>
-        })
+        // document.querySelector('#ashghali').addEventListener('click', function() {
+        //     <?php 
+        //         // this is bog
+        //         ?>
+        // })
     </script>
     <script src="../../c/EROR.js"></script>
 
+                <?php
+                require_once __DIR__ . '/../../c/admin.php';
+                ?>
 </body>
 
 </html>

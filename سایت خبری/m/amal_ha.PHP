@@ -113,10 +113,10 @@ class amal_ha extends connect
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
             return $result;
         }
-        if (basename($_SERVER['SCRIPT_FILENAME']) == 'admin.php') {
+        if (basename($_SERVER['SCRIPT_FILENAME']) == 'index.php') {
             $stmt = $this->conn->prepare('SELECT * FROM `post` WHERE 1 = 1');
             $stmt->execute();
-            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             return $result;
         }
     }
