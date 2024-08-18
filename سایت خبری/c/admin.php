@@ -7,7 +7,7 @@
     {
         parent::__construct() ;
         // this is bog 
-      $this->senn() ; 
+      $this->seen() ; 
        $this->conn = null ; 
 
     }
@@ -27,30 +27,25 @@
     public function seen ()
     {
         // this is not test
-       $p[] = $this->selekt() ;
-        // print_r($p);
-        // echo "<br>" ; 
-        // echo count($p[0]) ;
-        // echo $p[0][1]['mtn'] ; 
+        $p[] = $this->selekt();
+
         
-        for ($i = 0; $i <count($p[0]) ; $i++)
-        {
-        echo  " <tr>
-                <th>
-                    <a href='../add post/index.php'> <i class='i' class='bi bi-pencil-fill'></i></a>
-                    <i class='i' id='ashghali' class='bi bi-trash3'></i>
-                    <a href='../add post/index.php'> <i class='i' class='bi bi-cloud-plus-fill'></i></a>
-                    <i class='i' class='bi bi-eye-fill'></i>
-                </th>
-                <th>x</th>
-                <th>x</th>
-                <th>x</th>
-                <th>x</th>
-                <th>x</th>
-</tr>" ;     
+        for ($i = 0; $i < count($p[0]); $i++) {
+            echo "<tr>
+                    <th>
+                        <a href='../add post/index.php'><i class='i bi bi-pencil-fill'></i></a>
+                        <i class='i bi bi-trash3' id='ashghali'></i>
+                        <a href='../add post/index.php'><i class='i bi bi-cloud-plus-fill'></i></a>
+                        <i class='i bi bi-eye-fill'></i>
+                    </th>
+                    <th>" . $p[0][$i]['seen'] . "</th>
+                    <th>". $p[0][$i]['edit'] . "</th>
+                    <th>". 'ok'.  "</th>
+                    <th class='post'>". $p[0][$i]['mtn'] . "</th>
+                    <th>". $p[0][$i]['titel'] . "</th>
+                  </tr>";
         }
         
     }
 
  }
- $r= new admin() ; 

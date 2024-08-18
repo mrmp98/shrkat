@@ -24,8 +24,10 @@
                 <th>پست </th>
                 <th>تایتل </th>
             </tr>
-            <?php 
-              $this->seen() ; 
+            <?php
+            require_once __DIR__ . '/../../c/admin.php'; 
+ $r= new admin() ; 
+               
              ?>
 
         </table>
@@ -37,7 +39,7 @@
             <button id="back"> <a href="../acc/acc.php"> بازگشت به اکانت </a></button>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="sscript.js"></script>
     <script>
         // document.querySelector('#ashghali').addEventListener('click', function() {
         //     <?php 
@@ -47,9 +49,6 @@
     </script>
     <script src="../../c/EROR.js"></script>
 
-                <?php
-                require_once __DIR__ . '/../../c/admin.php';
-                ?>
 </body>
 
 </html>
