@@ -8,8 +8,7 @@ class connect
 
     public function __construct()
     {
-        try 
-        {
+        try {
 
             $this->conn = new PDO("mysql:host=$this->servername;dbname=froshgah", $this->username, $this->password);
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -28,8 +27,7 @@ class amal_ha extends connect
     public function chek($table_name, $value, $column_name)
     {
 
-        if (empty($table_name) || empty($value) || empty($column_name))
-         {
+        if (empty($table_name) || empty($value) || empty($column_name)) {
             echo "نام جدول، مقدار یا نام ستون نمی‌تواند خالی باشد.";
             return false;
         }
@@ -79,11 +77,9 @@ class amal_ha extends connect
             $stmt->bindParam(':phone', $phon);
             $stmt->bindParam(':semat', $semat);
 
-            if ($stmt->execute()) 
-            {
+            if ($stmt->execute()) {
                 echo "اطلاعات با موفقیت وارد شد.";
-            } else 
-            {
+            } else {
                 echo "خطا در وارد کردن اطلاعات: " . $stmt->errorInfo();
             }
         } catch (PDOException $e) {
@@ -92,62 +88,54 @@ class amal_ha extends connect
     }
     public function add_to_post($table_name, $user, $seen, $mtn, $edit)
     {
-        try 
-        {
+        try {
             $sql = "INSERT INTO $table_name (user, seen, mtn, edit) VALUES (:user, :seen, :mtn, :edit)";
             $stmt = $this->conn->prepare($sql);
             $stmt->bindParam(':user', $user);
             $stmt->bindParam(':seen', $seen);
             $stmt->bindParam(':mtn', $mtn);
             $stmt->bindParam(':edit', $edit);
-            if ($stmt->execute())
-            {
+            if ($stmt->execute()) {
                 echo "اطلاعات با موفقیت وارد شد.";
-            } else
-             {
+            } else {
                 echo "خطا در وارد کردن اطلاعات: " . $stmt->errorInfo();
             }
-        } catch (PDOException $e) 
-        {
+        } catch (PDOException $e) {
             echo "Connection failed: " . $e->getMessage();
         }
     }
-    public function selekt($table_name, $r = null, $r2 = null)
+    public function selekt($r = null, $r2 = null)
     {
-        if (basename($_SERVER['SCRIPT_FILENAME']) == 'acc.php') 
-        {
+        if (basename($_SERVER['SCRIPT_FILENAME']) == 'acc.php') {
             // اجرای کوئری SQL
-$stmt = $this->conn->prepare("SELECT user, password, semat, email, phone FROM abote WHERE user = '123' AND password = '123'");
-$stmt->execute();
-
-// خواندن داده‌های بازگشتی
-$result = $stmt->fetch(PDO::FETCH_ASSOC);
-
-// چاپ داده‌های بازگشتی
-return $result;
-
+            $stmt = $this->conn->prepare("SELECT user, password, semat, email, phone FROM abote WHERE user = $r AND password = $r2");
+            $stmt->execute();
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $result;
+        }
+        if (basename($_SERVER['SCRIPT_FILENAME']) == 'admin.php') {
+            $stmt = $this->conn->prepare('SELECT * FROM `post` WHERE 1 = 1');
+            $stmt->execute();
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $result;
         }
     }
-    
+
     public  function update($table_name, $user = null, $seen = null, $mtn = null, $edit = null)
     {
-        try 
-        {
+        try {
             $sql = "INSERT INTO $table_name (user, seen, mtn, edit) VALUES (:user, :seen, :mtn, :edit)";
             $stmt = $this->conn->prepare($sql);
             $stmt->bindParam(':user', $user);
             $stmt->bindParam(':seen', $seen);
             $stmt->bindParam(':mtn', $mtn);
             $stmt->bindParam(':edit', $edit);
-            if ($stmt->execute()) 
-            {
+            if ($stmt->execute()) {
                 echo "اطلاعات با موفقیت وارد شد.";
-            } else 
-            {
+            } else {
                 echo "خطا در وارد کردن اطلاعات: " . $stmt->errorInfo();
             }
-        } catch (PDOException $e) 
-        {
+        } catch (PDOException $e) {
             echo "Connection failed: " . $e->getMessage();
         }
     }

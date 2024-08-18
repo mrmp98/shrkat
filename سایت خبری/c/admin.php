@@ -6,7 +6,7 @@
     public function __construct()
     {
         parent::__construct() ;
-        
+        // this is bog 
            (substr(($_SERVER['SCRIPT_FILENAME']), -11 )== 'c/admin.php')? $this->user()  : $this->admin() ; 
        $this->conn = null ; 
 
@@ -14,24 +14,22 @@
      public function js( $ho , $jsCode) 
   {
     echo "<script>";
-    echo "document.querySelector('$ho').innerHTML = '$jsCode'" ; 
+    echo "" ; 
     echo "</script>";
   }  
     public function del ()
     {
-        $this->js('bi-trash3' , $this->dell() ) ; 
+        // this is bog 
+
+        // $this->dell('');
            
     }
     public function senn ()
     {
-        $this->js('bi-pencil-fill' , $this->selekt()) ; 
+        // this is not test
+        $this->selekt() ; 
         
     }
-    public function admin()
-    { 
-        $this->add_to_post() ; 
-        $this->del() ; 
-        $this->edit();
-    }
+
  }
  $r= new admin() ; 

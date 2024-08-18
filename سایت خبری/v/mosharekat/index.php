@@ -1,5 +1,5 @@
 <?php
- require_once __DIR__ . '/../../c/admin.php';
+require_once __DIR__ . '/../../c/admin.php';
 session_start();
 ?>
 <!DOCTYPE html>
@@ -20,7 +20,7 @@ session_start();
 
     <div id="mama">
         <table>
-            <tr>                  
+            <tr>
                 <th> گزینه ها </th>
                 <th>تعداد سین </th>
                 <th>تعداد ادیت </th>
@@ -29,17 +29,17 @@ session_start();
                 <th>تایتل </th>
             </tr>
             <tr>
-              <th>
-             <a href="../add post/index.html"> <i class="i" class="bi bi-pencil-fill"></i></a>
-              <i class="i" class="bi bi-trash3"></i>
-             <a href="../add post/index.html"> <i class="i" class="bi bi-cloud-plus-fill"></i></a>
-              <i class="i" class="bi bi-eye-fill"></i>
-              </th>
-              <th id="th1">x</th>
-              <th id="th2">x</th>
-              <th id="th3">x</th>
-              <th id="th4">x</th>
-              <th id="th5">x</th>
+                <th>
+                    <a href="../add post/index.php"> <i class="i" class="bi bi-pencil-fill"></i></a>
+                    <i class="i" id="ashghali" class="bi bi-trash3"></i>
+                    <a href="../add post/index.php"> <i class="i" class="bi bi-cloud-plus-fill"></i></a>
+                    <i class="i" class="bi bi-eye-fill"></i>
+                </th>
+                <th id="th1">x</th>
+                <th id="th2">x</th>
+                <th id="th3">x</th>
+                <th id="th4">x</th>
+                <th id="th5">x</th>
             </tr>
 
         </table>
@@ -52,7 +52,13 @@ session_start();
         </div>
     </div>
     <script src="script.js"></script>
-
+    <script>
+        document.querySelector('#ashghali').addEventListener('click', function() {
+            <?php 
+                // this is bog
+                ?>
+        })
+    </script>
     <script src="../../c/EROR.js"></script>
 
 </body>
