@@ -40,7 +40,7 @@
        <script src="../../c/EROR.js"></script>
       <div id="dokme">
        <div class="dokme_ha"><a href="../mosharekat/index.php"><button class="btn">مشارکت ها  </button></div> </a>
-       <div class="dokme_ha"><a href="../syt/index.html"><button class="btn">بازگشت به  سایت  </button></div> </a>
+       <div class="dokme_ha"><a href="../syt/index.php"><button class="btn">بازگشت به  سایت  </button></div> </a>
     </div>
   </div>  
 </body>

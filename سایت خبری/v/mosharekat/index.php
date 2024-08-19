@@ -12,7 +12,7 @@
 
 <body>
     <p>  عزیز خوش اومدی مشارکت های شما عبارت است از </p>
-    <div id="div"><a id="a" href="../add post/index.html"><i id="i2" class="bi bi-cloud-plus"></i> افزودن پست </a></div>
+    <div id="div"><a id="a" href="../add post/index.php"><i id="i2" class="bi bi-cloud-plus"></i> افزودن پست </a></div>
 
     <div id="mama">
         <table id="mymediya">
@@ -34,7 +34,7 @@
     </div>
     <div id="dokme">
         <div>
-            <button> <a href="../syt/index.html"> بازگشت به سایت </a>
+            <button> <a href="../syt/index.php"> بازگشت به سایت </a>
             </button>
             <button id="back"> <a href="../acc/acc.php"> بازگشت به اکانت </a></button>
         </div>
