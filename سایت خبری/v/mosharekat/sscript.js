@@ -10,3 +10,8 @@ postElements.forEach(postElement => {
     let truncatedText = truncateText(postElement, 60);
     postElement.innerHTML = truncatedText;
 });
+let table = document.getElementById('mymediya');
+table.addEventListener('click', function(event) {
+    let cellValue = event.target.textContent;
+    console.log(cellValue);
+});

@@ -41,12 +41,7 @@
     </div>
     <script src="sscript.js"></script>
     <script>
-        // this is bog
-        let table = document.getElementById('mymediya');
-    table.addEventListener('click', function(event) {
-        let cellValue = event.target.textContent;
-        console.log(cellValue);
-    });
+     
     </script>
     <script src="../../c/EROR.js"></script>
 
