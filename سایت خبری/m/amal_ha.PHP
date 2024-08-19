@@ -107,11 +107,12 @@ class amal_ha extends connect
     public function selekt($r = null, $r2 = null)
     {
         if (basename($_SERVER['SCRIPT_FILENAME']) == 'acc.php') {
-            // اجرای کوئری SQL
-            $stmt = $this->conn->prepare("SELECT user, password, semat, email, phone FROM abote WHERE user = $r AND password = $r2");
-            $stmt->execute();
+            $stmt = $this->conn->prepare("SELECT user, password, semat, email, phone FROM abote WHERE user = :user AND password = :password");
+$stmt->execute(['user' => $r, 'password' => $r2]);
+ 
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
             return $result;
+            
         }
         if (basename($_SERVER['SCRIPT_FILENAME']) == 'index.php') {
             $stmt = $this->conn->prepare('SELECT * FROM `post` WHERE 1 = 1');

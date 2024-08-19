@@ -10,7 +10,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
 </head>
-<body >
+<body style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
     <div class="dropdown">
         <button type="button" id="y" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
            انتخاب موضوع
@@ -24,27 +24,20 @@
     <br>
     <br>
     <br>
+    <div>
+        <input type="text" placeholder="title">
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
     <div id="post">
         <form method="post">
             <textarea id="myTextarea" name="myTextarea" rows="20" cols="50" placeholder="خبر خود را بنویسید"></textarea>
-            <div style="width: 200px; height: 40px; background-color: black; color: white;" id="submit" name="submit" type="">ثبت خبر</div >
-            <button><a href="../acc/../mosharekat/index.php">بازگشت</a></button>
+            <div style="width: 200px; height: 40px; background-color: black; color: white; cursor: pointer;" id="submit">ثبت خبر</div>
+            <button type="button" onclick="window.location.href='../acc/../mosharekat/index.php'">بازگشت</button>
         </form>
     </div>
-    <script>
-        var submit = document.querySelector("#submit");
-        submit.addEventListener("click", function() {
-            var myTextarea = document.querySelector("#myTextarea").value;
-            var collapss = document.querySelector('#y').innerHTML ;
-              
-            console.log(collapss.trim()) ;   
-            if(myTextarea.trim()=== '' || collapss.trim() == 'انتخاب موضوع'){
-                alert('لطفا تمام اینپوت هارا پر کنید ')
-            }else {
-                // <?php ?>
-            }
-        });
-    </script>
     
     <script src="index.js"></script>
 </body>
