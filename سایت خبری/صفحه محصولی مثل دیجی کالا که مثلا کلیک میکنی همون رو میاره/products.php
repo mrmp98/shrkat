@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 $connection = new PDO("mysql:host=localhost;dbname=aref", 'root', '' );
 $page = 4;
