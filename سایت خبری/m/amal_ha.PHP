@@ -53,19 +53,27 @@ class amal_ha extends connect
     }
     public function dell($table_name, $id)
     {
+        // لیست سفید برای نام جدول
+        
+    
         try {
             $sql = "DELETE FROM $table_name WHERE id = :id";
-            $stmt = $this->conn->prepare($sql);
+            $stmt =   $this->conn->prepare($sql);
+             
             $stmt->bindParam(':id', $id);
             if ($stmt->execute()) {
                 echo "رکورد با موفقیت حذف شد.";
+                return true; // موفقیت
             } else {
-                echo "خطا در حذف رکورد: " . $stmt->errorInfo();
+                echo "خطا در حذف رکورد: " . print_r($stmt->errorInfo(), true);
+                return false; // خطا
             }
         } catch (PDOException $e) {
-            echo "Connection failed: " . $e->getMessage();
+            echo "خطا در اتصال: " . $e->getMessage();
+            return false; // خطا
         }
     }
+    
     public function add_to_abot($table_name, $name, $password, $email, $phon, $semat)
     {
         try {
@@ -115,6 +123,18 @@ $stmt->execute(['user' => $r, 'password' => $r2]);
             
         }
         if (basename($_SERVER['SCRIPT_FILENAME']) == 'index.php') {
+            if($r == 1){
+                
+                $stmt = $this->conn->prepare("SELECT `name` FROM `category` WHERE id = $r2");
+                
+                
+                $stmt->execute();
+
+                $result = $stmt->fetch(PDO::FETCH_ASSOC);
+                return  ($result['name']);
+                  
+                                    
+            }
             $stmt = $this->conn->prepare('SELECT * FROM `post` WHERE 1 = 1');
             $stmt->execute();
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);

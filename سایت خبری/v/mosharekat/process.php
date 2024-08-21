@@ -1,15 +1,24 @@
 <?php
-// this is bog 
-// دریافت داده‌های JSON
-$data = json_decode(file_get_contents('php://input'), true);
+ require_once __DIR__ . '/../../m/amal_ha.PHP';
 
-// بررسی اینکه آیا کلاس‌ها وجود دارند یا خیر
-if (isset($data['className'])) {
-    $className = $data['className'];
-    // اینجا می‌توانید از $className استفاده کنید
-    // به عنوان مثال، می‌توانید آن را در یک متغیر PHP ذخیره کنید
-    echo json_encode(['message' => 'کلاس دریافت شد: ' . $className]);
+class qw extends amal_ha 
+{
+    public function __construct()
+    {
+        parent::__construct();
+         
+    }
+    
+} 
+$r = new qw() ; 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // دریافت داده‌ها
+    $r->dell('post', $_POST['id']) ; 
+    
+    
 } else {
-    echo json_encode(['message' => 'کلاس دریافت نشد.']);
+    echo "داده‌ها به درستی ارسال نشدند.";
 }
 
+
+$r->conn = null ;

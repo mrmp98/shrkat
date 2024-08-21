@@ -1,3 +1,7 @@
+<?php
+require_once __DIR__ . "/../../c/add_to_post.php" ; 
+?>
+<!-- this is bog  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -16,38 +16,31 @@
         echo "<script>$r</script>"; 
     }
     
-    public function del()  
+   
+    public function daste_bandi($r , $r2)
     {
-        $this->js('
-            const x = document.querySelectorAll(".x");
-            x.forEach(c => {
-                c.addEventListener("click", function() {
-                    console.log(this.id); // اینجا id را در کنسول چاپ می‌کند
-                    // می‌توانید هر عملی دیگری که می‌خواهید با this.id انجام دهید
-                });
-            });
-        ');  
-        $this->dell('');
+       return $this->selekt($r , $r2);
     }
-    
-    public function seen ()
+        public function seen ()
     {
         // this is not test
         $p[] = $this->selekt();
         for ($i = 0; $i < count($p[0]); $i++) {
-            echo "<tr>
+             
+             
+            print_r("<tr>
                     <th>
                         <a href='../add post/index.php'><i class='i bi bi-pencil-fill'></i></a>
                         <i class='i bi bi-trash3 x' id='".$p[0][$i]['id'] . "'></i>
-                        <a href='../add post/index.php'><i class='i bi bi-cloud-plus-fill'></i></a>
                         <i class='i bi bi-eye-fill x'></i>
                     </th>
                     <td class='x' id='" . $p[0][$i]['id'] . "'>" . $p[0][$i]['seen'] . "</td>
                     <td class='x' id='" . $p[0][$i]['id'] . "'>" . $p[0][$i]['edit'] . "</td>
-                    <td class='x' id='" . $p[0][$i]['id'] . "'>" . 'ok' . "</td>
-                    <td class='x post'  id='" . $p[0][$i]['id'] . "'>" . $p[0][$i]['mtn'] . "</td>
+                    <td class='x' id='" . $p[0][$i]['id'] . "'>" . $this->daste_bandi(1 , $p[0][$i]['daste_bandi']) . "</td>
+                    <td class='x post'  id='" . $p[0][$i]['id'] . "'>" .  $p[0][$i]['mtn']  . "</td>
                     <td class='x' id='" . $p[0][$i]['id'] . " '>" . $p[0][$i]['titel'] . "</td>
-                  </tr>";
+                  </tr>" );
+                  
         }
         
         
