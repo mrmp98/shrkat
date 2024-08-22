@@ -7,10 +7,21 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap" rel="stylesheet">
     
 </head>
-
-<body style="text-align: end;">
+<style>
+body {
+    font-family: "Noto Nastaliq Urdu", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+  }
+</style>
+<body>
     <p>  ادمین عزیز خوش امدید </p>
     <div id="div"><a id="a" href="../add post/index.php"><i id="i2" class="bi bi-cloud-plus"></i> افزودن پست </a></div>
 
@@ -63,6 +74,14 @@
         })
     
     
+}
+function  edit(){
+    let o =document.querySelectorAll('.edit') ; 
+    o.forEach(oo=>{
+        oo.addEventListener('click' , function(){
+            localStorage
+        })
+    })
 }
 api() ; 
 </script>

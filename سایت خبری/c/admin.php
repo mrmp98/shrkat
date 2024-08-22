@@ -30,15 +30,15 @@
              
             print_r("<tr>
                     <th>
-                        <a href='../add post/index.php'><i class='i bi bi-pencil-fill'></i></a>
+                        <a href='../add post/index.php'><i class='i bi bi-pencil-fill edit'></i></a>
                         <i class='i bi bi-trash3 x' id='".$p[0][$i]['id'] . "'></i>
-                        <i class='i bi bi-eye-fill x'></i>
+                        <i class='i bi bi-eye-fill '></i>
                     </th>
-                    <td class='x' id='" . $p[0][$i]['id'] . "'>" . $p[0][$i]['seen'] . "</td>
-                    <td class='x' id='" . $p[0][$i]['id'] . "'>" . $p[0][$i]['edit'] . "</td>
-                    <td class='x' id='" . $p[0][$i]['id'] . "'>" . $this->daste_bandi(1 , $p[0][$i]['daste_bandi']) . "</td>
-                    <td class='x post'  id='" . $p[0][$i]['id'] . "'>" .  $p[0][$i]['mtn']  . "</td>
-                    <td class='x' id='" . $p[0][$i]['id'] . " '>" . $p[0][$i]['titel'] . "</td>
+                    <td class='' id='" . $p[0][$i]['id'] . "'>" . $p[0][$i]['seen'] . "</td>
+                    <td class='' id='" . $p[0][$i]['id'] . "'>" . $p[0][$i]['edit'] . "</td>
+                    <td class='' id='" . $p[0][$i]['id'] . "'>" . $this->daste_bandi(1 , $p[0][$i]['daste_bandi']) . "</td>
+                    <td class=' post'  id='" . $p[0][$i]['id'] . "'>" .  $p[0][$i]['mtn']  . "</td>
+                    <td class='' id='" . $p[0][$i]['id'] . " '>" . $p[0][$i]['titel'] . "</td>
                   </tr>" );
                   
         }

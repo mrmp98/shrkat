@@ -12,7 +12,6 @@ class qw extends amal_ha
 } 
 $r = new qw() ; 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // دریافت داده‌ها
     $r->dell('post', $_POST['id']) ; 
     
     
