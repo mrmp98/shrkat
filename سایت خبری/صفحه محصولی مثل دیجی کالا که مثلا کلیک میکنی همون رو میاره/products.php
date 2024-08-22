@@ -5,7 +5,6 @@ $page = 4;
 $per_page = 1;
 $offset = ( $page - 1 ) * $per_page;
 $sql        = "SELECT * FROM aref";
-
 $products   = $connection->query( $sql );
 echo '<div class="products">';
 while( $prodcut = $products->fetchObject() ){

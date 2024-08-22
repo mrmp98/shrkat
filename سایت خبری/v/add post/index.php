@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . "/../../c/add_to_post.php" ; 
+require_once __DIR__ . "/../../c/edit_to_post.php" ; 
 ?>
 
 <!DOCTYPE html>

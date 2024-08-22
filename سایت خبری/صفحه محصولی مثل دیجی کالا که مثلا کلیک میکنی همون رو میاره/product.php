@@ -6,7 +6,6 @@ $per_page = 1;
 $offset = ( $page - 1 ) * $per_page;
 $id         = $_GET['id'];
 $sql        = "SELECT * FROM aref WHERE id = $id";
-
 $products   = $connection->query( $sql );
 echo '<div class="products">';
 while( $prodcut = $products->fetchObject() ){
