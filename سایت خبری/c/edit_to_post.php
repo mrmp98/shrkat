@@ -9,8 +9,17 @@ class added extends amal_ha
     public function __construct()
     {
         parent::__construct() ; 
+    
     }
-    public function savee(){
+    public function savee()
+    {
+        // this is bog 
+        if(isset($_POST['submmit'])){
+            echo $_POST['myTextarea']  ; 
+             
+        }else{
+            echo 'ثیت نشده '   ; 
+        }
         // this is bog and xss 
     }
     public function qw($r , $r2)
