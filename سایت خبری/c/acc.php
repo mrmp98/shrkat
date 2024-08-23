@@ -27,7 +27,8 @@ class qw extends amal_ha
   $this->ScriptCode('#emil_1', $_SESSION['emil']);
  
   } 
-  public function admin ($r) {
+  public function admin ($r) 
+  {
 
     return ($r == '1') ? 'کاربر عادی' : 'admin'  ; 
   }

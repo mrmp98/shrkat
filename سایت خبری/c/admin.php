@@ -26,11 +26,9 @@
         // this is not test
         $p[] = $this->selekt();
         for ($i = 0; $i < count($p[0]); $i++) {
-             
-             
             print_r("<tr>
                     <th>
-                        <a href='../add post/index.php'><i class='i bi bi-pencil-fill edit'></i></a>
+                        <a href='../add post/index.php?id={$p[0][$i]['id']}'><i class='i bi bi-pencil-fill edit'></i></a>
                         <i class='i bi bi-trash3 x' id='".$p[0][$i]['id'] . "'></i>
                         <i class='i bi bi-eye-fill '></i>
                     </th>

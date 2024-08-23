@@ -26,7 +26,8 @@ class qw extends amal_ha
               $_SESSION['password'] = $_POST['password'];    
               header('Location: ../acc/acc.php');
               exit(); 
-          } else 
+          } 
+          else 
           {
               
   
@@ -35,7 +36,8 @@ class qw extends amal_ha
               header('Location: ../sign up/singup.php');
               exit(); 
           }
-      } else 
+      }
+       else 
       {
           echo '<script>alert("لطفاً نام کاربری را وارد کنید")</script>';
       }
