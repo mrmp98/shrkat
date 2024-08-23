@@ -5,13 +5,18 @@ require_once __DIR__ . "/../m/amal_ha.PHP" ;
 class added extends amal_ha 
 {
     public $id = null;
+      
     public function __construct()
     {
         parent::__construct() ; 
-        //   this is bog 
-        // xss 
-         print_r($this->selekt('2' , $this->get() )) ; 
-        $this->conn = null ; 
+    }
+    public function savee(){
+        // this is bog and xss 
+    }
+    public function qw($r , $r2)
+    {
+       $p[] =  $this->selekt('2' , $this->get() ) ;
+        print_r($p[$r][$r2]) ;
     }
     public function get ()  
     {
@@ -19,4 +24,5 @@ class added extends amal_ha
 
     }
 }
-$qw = new added() ; 
+
+$qw = new added() ;

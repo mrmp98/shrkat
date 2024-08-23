@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . "/../../c/edit_to_post.php" ; 
+$qw = new added() ;  
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +29,7 @@ require_once __DIR__ . "/../../c/edit_to_post.php" ;
     <br>
     <br>
     <div>
-        <input type="text" value="<?php //titel sql ?>" placeholder="title">
+        <input type="text" value="<?php $qw->qw(0 , 'titel');   ?>" placeholder="title">
     </div>
     <br>
     <br>
@@ -36,7 +37,7 @@ require_once __DIR__ . "/../../c/edit_to_post.php" ;
     <br>
     <div id="post">
         <form method="post">
-            <textarea id="myTextarea" name="myTextarea" rows="20" cols="50"  placeholder="خبر خود را بنویسید"><?php //post sql ?></textarea>
+            <textarea id="myTextarea" name="myTextarea" rows="20" cols="50"  placeholder="خبر خود را بنویسید"><?php $qw->qw(0 , 'mtn'); ; ?></textarea>
             <br>
             <br>
             <div style="width: 200px; height: 40px; background-color: black; color: white; cursor: pointer ; display: flex; " id="submit">ثبت خبر</div>
