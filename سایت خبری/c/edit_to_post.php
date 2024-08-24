@@ -13,12 +13,9 @@ class added extends amal_ha
     }
     public function savee()
     {
-        // this is bog 
         if(isset($_POST['submmit'])){
-            echo $_POST['myTextarea']  ; 
-             
-        }else{
-            echo 'ثیت نشده '   ; 
+            // this is bog
+            $this->update( xss (titel and mtn update) , shart id == id get)
         }
         // this is bog and xss 
     }

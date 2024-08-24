@@ -15,7 +15,7 @@ $qw = new added() ;
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
 </head>
 <body style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
-    <div class="dropdown">
+    <!-- <div class="dropdown">
         <button type="button" id="y" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
            انتخاب موضوع
         </button>
@@ -23,7 +23,7 @@ $qw = new added() ;
           <li class="dropdown-item">ورزشی</li>
           <li class="dropdown-item">اقتصادی</li>
           <li class="dropdown-item">سیاسی</li>
-        </ul>
+        </ul> -->
     </div> 
     <br>
     <br>
@@ -40,12 +40,14 @@ $qw = new added() ;
             <textarea id="myTextarea" name="myTextarea" rows="20" cols="50"  placeholder="خبر خود را بنویسید"><?php $qw->qw(0 , 'mtn');  ?></textarea>
             <br>
             <br>
-            <button type="submit" name="submmit" style="width: 200px; height: 40px; background-color: black; color: white; cursor: pointer ; display: flex; " id="submit">ثبت خبر</button>
+            <button type="submit" name="submmit" style="width: 200px; height: 40px; background-color: black; color: white; cursor: pointer ; display: flex; " id="">ثبت خبر</button>
             <button type="button" onclick="window.location.href='../acc/../mosharekat/index.php'">بازگشت</button>
         </form>
     </div>
     
-<?php $qw->savee(); ?>
+<?php 
+$qw->savee() ; 
+?>
 
     <script src="index.js"></script>
 </body>
