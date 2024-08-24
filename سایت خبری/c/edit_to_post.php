@@ -20,6 +20,7 @@ class added extends amal_ha
             $text =  $_POST['myTextarea'] ; 
             $titel=  $_POST['qwasd'] ;
             $this->update('post' , $this->get(),$this->xss($text , FILTER_SANITIZE_SPECIAL_CHARS ) , $this->xss($titel , FILTER_SANITIZE_SPECIAL_CHARS )) ; 
+            $this->conn = null ; 
             header('location:../mosharekat/') ; 
             exit ; 
         }

@@ -94,15 +94,19 @@ class amal_ha extends connect
             echo "Connection failed: " . $e->getMessage();
         }
     }
-    public function add_to_post($table_name, $user, $seen, $mtn, $edit)
+    public function add_to_post($table_name, $user, $mtn , $edit , $like , $dastebandi , $titel , $seen)
     {
         try {
-            $sql = "INSERT INTO $table_name (user, seen, mtn, edit) VALUES (:user, :seen, :mtn, :edit)";
+            $sql = "INSERT INTO $table_name (user, mtn, edit , count_like , daste_bandi , titel , seen ) VALUES (:user, :mtn, :edit, :liike , :dastebandi ,:titel ,:seen)";
             $stmt = $this->conn->prepare($sql);
             $stmt->bindParam(':user', $user);
-            $stmt->bindParam(':seen', $seen);
             $stmt->bindParam(':mtn', $mtn);
             $stmt->bindParam(':edit', $edit);
+            $stmt->bindParam(':liike', $like); 
+            $stmt->bindParam(':dastebandi', $dastebandi); 
+            $stmt->bindParam(':titel', $titel); 
+            $stmt->bindParam(':seen', $seen); 
+
             if ($stmt->execute()) {
                 echo "اطلاعات با موفقیت وارد شد.";
             } else {
