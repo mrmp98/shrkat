@@ -15,16 +15,7 @@ $qw = new added() ;
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
 </head>
 <body style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
-    <!-- <div class="dropdown">
-        <button type="button" id="y" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-           انتخاب موضوع
-        </button>
-        <ul class="dropdown-menu">
-          <li class="dropdown-item">ورزشی</li>
-          <li class="dropdown-item">اقتصادی</li>
-          <li class="dropdown-item">سیاسی</li>
-        </ul> -->
-    </div> 
+     
     <br>
     <br>
     <br>

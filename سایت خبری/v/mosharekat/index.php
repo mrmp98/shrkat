@@ -23,7 +23,7 @@ body {
 </style>
 <body>
     <p>  ادمین عزیز خوش امدید </p>
-    <div id="div"><a id="a" href="../add post/index.php"><i id="i2" class="bi bi-cloud-plus"></i> افزودن پست </a></div>
+    <div id="div"><a id="a" href="../aded/index.php"><i id="i2" class="bi bi-cloud-plus"></i> افزودن پست </a></div>
 
     <div id="mama">
     <table id="mymediya">
@@ -38,7 +38,6 @@ body {
     <?php
     require_once __DIR__ . '/../../c/admin.php'; 
     $r = new admin(); 
-    // فرض کنید که اینجا داده‌هایی برای جدول اضافه می‌شود
     ?>
 </table>
 
@@ -64,7 +63,7 @@ body {
                     url  : 'process.php' , 
                     data : { id: pp.id} , 
                     success: function(response) {
-                    // نمایش پاسخ از سرور
+                  
                     $('#response').html(response);
                 },
                 
