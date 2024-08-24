@@ -2,7 +2,7 @@
 require_once __DIR__ . "/../../c/edit_to_post.php" ; 
 ?>
 
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
