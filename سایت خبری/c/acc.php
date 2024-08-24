@@ -47,7 +47,3 @@ class qw extends amal_ha
   }
 }
 $qw = new qw();  
-
-
-
-

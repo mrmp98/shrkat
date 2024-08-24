@@ -18,7 +18,8 @@
         if(isset($_POST['submmit']))
         {
             
-         if(isset($_SESSION['username']) ){
+         if(isset($_SESSION['username']) )
+         {
             $w = $_SESSION['username'] ;  
           }else{
             $w = $_SESSION['name'] ; 

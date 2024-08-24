@@ -126,19 +126,16 @@ $stmt->execute(['user' => $r, 'password' => $r2]);
             return $result;
             
         }
-        if (basename($_SERVER['SCRIPT_FILENAME']) == 'index.php') {
+        if (basename($_SERVER['SCRIPT_FILENAME']) == 'index.php') 
+        {
             
-            if($r == 1){
+            if($r == 1)
+            {
                 
-                $stmt = $this->conn->prepare("SELECT `name` FROM `category` WHERE id = $r2");
-                
-                
+                $stmt = $this->conn->prepare("SELECT `name` FROM `category` WHERE id = $r2"); 
                 $stmt->execute();
-
                 $result = $stmt->fetch(PDO::FETCH_ASSOC);
-                return  ($result['name']);
-                  
-                                    
+                return  ($result['name']);   
             }
             if($r == 2)
             {
@@ -166,6 +163,7 @@ $stmt->execute(['user' => $r, 'password' => $r2]);
             $stmt->bindParam(':titel', $r2);
         
             if ($stmt->execute()) {
+                
                 echo "اطلاعات با موفقیت به‌روزرسانی شد.";
             } else {
                 echo "خطا در به‌روزرسانی اطلاعات: " . print_r($stmt->errorInfo(), true);
