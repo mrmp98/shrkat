@@ -153,20 +153,20 @@ $stmt->execute(['user' => $r, 'password' => $r2]);
         }
     }
 
-    public  function update($table_name, $user = null, $seen = null, $mtn = null, $edit = null)
+    public  function update($table_name, $id = null ,  $r1 = null, $r2 = null)
     {
         try {
-            $sql = "INSERT INTO $table_name (user, seen, mtn, edit) VALUES (:user, :seen, :mtn, :edit)";
+            $sql = "UPDATE $table_name SET mtn = :mtn, titel = :titel WHERE id = $id";
             $stmt = $this->conn->prepare($sql);
-            $stmt->bindParam(':user', $user);
-            $stmt->bindParam(':seen', $seen);
-            $stmt->bindParam(':mtn', $mtn);
-            $stmt->bindParam(':edit', $edit);
+            $stmt->bindParam(':mtn', $r1);
+            $stmt->bindParam(':titel', $r2);
+        
             if ($stmt->execute()) {
-                echo "اطلاعات با موفقیت وارد شد.";
+                echo "اطلاعات با موفقیت به‌روزرسانی شد.";
             } else {
-                echo "خطا در وارد کردن اطلاعات: " . $stmt->errorInfo();
+                echo "خطا در به‌روزرسانی اطلاعات: " . print_r($stmt->errorInfo(), true);
             }
+            
         } 
         catch (PDOException $e)
          {

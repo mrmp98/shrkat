@@ -1,9 +1,10 @@
 <?php 
 // this is bog 
 require_once __DIR__ . "/../m/amal_ha.PHP" ; 
- 
+ require_once __DIR__ ."/amniyat.php";
 class added extends amal_ha 
 {
+    use  amniyat ; 
     public $id = null;
       
     public function __construct()
@@ -13,11 +14,15 @@ class added extends amal_ha
     }
     public function savee()
     {
-        if(isset($_POST['submmit'])){
-            // this is bog
-            $this->update( xss (titel and mtn update) , shart id == id get)
+         
+        if(isset($_POST['submmit']))
+        {
+            $text =  $_POST['myTextarea'] ; 
+            $titel=  $_POST['qwasd'] ;
+            $this->update('post' , $this->get(),$this->xss($text , FILTER_SANITIZE_SPECIAL_CHARS ) , $this->xss($titel , FILTER_SANITIZE_SPECIAL_CHARS )) ; 
+            header('location:../mosharekat/') ; 
+            exit ; 
         }
-        // this is bog and xss 
     }
     public function qw($r , $r2)
     {
@@ -26,8 +31,9 @@ class added extends amal_ha
     }
     public function get ()  
     {
-    return  $this->id = $_GET['id']   ; 
-
+         
+    return  $_GET['id']   ; 
+         
     }
 }
 

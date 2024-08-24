@@ -29,18 +29,20 @@ $qw = new added() ;
     <br>
     <br>
     <div>
-        <input type="text" value="<?php $qw->qw(0 , 'titel');   ?>" placeholder="title">
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div id="post">
-        <form method="post">
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="post">
+            <form method="post">
+            <input type="text" name="qwasd" value="<?php $qw->qw(0 , 'titel');   ?>" placeholder="title">
+            <br>
+            <br>
             <textarea id="myTextarea" name="myTextarea" rows="20" cols="50"  placeholder="خبر خود را بنویسید"><?php $qw->qw(0 , 'mtn');  ?></textarea>
             <br>
             <br>
-            <button type="submit" name="submmit" style="width: 200px; height: 40px; background-color: black; color: white; cursor: pointer ; display: flex; " id="">ثبت خبر</button>
+            <button type="submit" name="submmit" style="width: 200px; height: 40px; background-color: black; color: white; cursor: pointer ; display: flex; " id="">ویرایش خبر </button>
             <button type="button" onclick="window.location.href='../acc/../mosharekat/index.php'">بازگشت</button>
         </form>
     </div>
