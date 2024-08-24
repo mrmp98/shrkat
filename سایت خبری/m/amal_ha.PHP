@@ -123,6 +123,7 @@ $stmt->execute(['user' => $r, 'password' => $r2]);
             
         }
         if (basename($_SERVER['SCRIPT_FILENAME']) == 'index.php') {
+            
             if($r == 1){
                 
                 $stmt = $this->conn->prepare("SELECT `name` FROM `category` WHERE id = $r2");
@@ -134,6 +135,16 @@ $stmt->execute(['user' => $r, 'password' => $r2]);
                 return  ($result['name']);
                   
                                     
+            }
+            if($r == 2)
+            {
+                
+                $stmt = $this->conn->prepare("SELECT `mtn`, `daste_bandi`, `titel` FROM `post` WHERE id = $r2");
+                $stmt->execute();
+                $result = $stmt->fetch(PDO::FETCH_ASSOC);
+                return  ($result);
+                  
+                
             }
             $stmt = $this->conn->prepare('SELECT * FROM `post` WHERE 1 = 1');
             $stmt->execute();
@@ -156,7 +167,9 @@ $stmt->execute(['user' => $r, 'password' => $r2]);
             } else {
                 echo "خطا در وارد کردن اطلاعات: " . $stmt->errorInfo();
             }
-        } catch (PDOException $e) {
+        } 
+        catch (PDOException $e)
+         {
             echo "Connection failed: " . $e->getMessage();
         }
     }

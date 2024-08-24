@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . "/../../c/edit_to_post.php" ; 
+$qw = new added() ;
 ?>
 
 <!DOCTYPE html> 
@@ -14,7 +15,7 @@ require_once __DIR__ . "/../../c/edit_to_post.php" ;
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
 </head>
 <body style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
-    <div class="dropdown">
+    <!-- <div class="dropdown">
         <button type="button" id="y" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
            انتخاب موضوع
         </button>
@@ -22,13 +23,13 @@ require_once __DIR__ . "/../../c/edit_to_post.php" ;
           <li class="dropdown-item">ورزشی</li>
           <li class="dropdown-item">اقتصادی</li>
           <li class="dropdown-item">سیاسی</li>
-        </ul>
+        </ul> -->
     </div> 
     <br>
     <br>
     <br>
     <div>
-        <input type="text" value="<?php //titel sql ?>" placeholder="title">
+        <input type="text" value="<?php $qw->qw(0 , 'titel');   ?>" placeholder="title">
     </div>
     <br>
     <br>
@@ -36,14 +37,18 @@ require_once __DIR__ . "/../../c/edit_to_post.php" ;
     <br>
     <div id="post">
         <form method="post">
-            <textarea id="myTextarea" name="myTextarea" rows="20" cols="50"  placeholder="خبر خود را بنویسید"><?php //post sql ?></textarea>
+            <textarea id="myTextarea" name="myTextarea" rows="20" cols="50"  placeholder="خبر خود را بنویسید"><?php $qw->qw(0 , 'mtn');  ?></textarea>
             <br>
             <br>
-            <div style="width: 200px; height: 40px; background-color: black; color: white; cursor: pointer ; display: flex; " id="submit">ثبت خبر</div>
+            <button type="submit" name="submmit" style="width: 200px; height: 40px; background-color: black; color: white; cursor: pointer ; display: flex; " id="">ثبت خبر</button>
             <button type="button" onclick="window.location.href='../acc/../mosharekat/index.php'">بازگشت</button>
         </form>
     </div>
     
+<?php 
+$qw->savee() ; 
+?>
+
     <script src="index.js"></script>
 </body>
 </html>

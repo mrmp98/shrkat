@@ -4,7 +4,8 @@
  trait  amniyat 
  {
 
-    function xss($r , $noesh){
+    function xss($r , $noesh)
+    {
        
      return   htmlspecialchars(filter_var($r, $noesh));
     }
