@@ -5,8 +5,10 @@ class safe  extends amal_ha
     public function __construct()
     {
         parent::__construct();
+        $this->seen() ; 
     }
-    public function selektt($w , $w2){
+    public function selektt($w , $w2)
+    {
        return $this->selekt($w , $w2)  ;
     } 
 
@@ -59,4 +61,3 @@ class safe  extends amal_ha
 
     }
 $safe = new safe() ; 
-$safe->seen() ; 
