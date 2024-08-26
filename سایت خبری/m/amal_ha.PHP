@@ -146,6 +146,13 @@ $stmt->execute(['user' => $r, 'password' => $r2]);
                 return  ($result);
                   
                 
+            } 
+            if($r == 3)
+            {
+                $stmt = $this->conn->prepare("SELECT * FROM `abote` WHERE id = $r2")  ; 
+                $stmt->execute();
+                $result = $stmt->fetch(PDO::FETCH_ASSOC);
+                return  $result;
             }
             $stmt = $this->conn->prepare('SELECT * FROM `post` WHERE 1 = 1');
             $stmt->execute();

@@ -1,87 +1,114 @@
-<!DOCTYPE html>
-<html lang="en" dir="rtl">
+ <!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-    <script src="jquery-3.7.1.min.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>   
+    <link rel="stylesheet" href="style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
-<body style="overflow-x: hidden;">
-    
-    <section>
-        <nav class="row d-flex " style="background-color: #003366;">
-            <div class="col-12 py-2  d-flex">
-                <a class="text-decoration-none text-white fs-3 fw-bold me-3" href="">اخبار آنلاین</a>
-                <ul class="nav mt-1">
-                    <li class="nav-item "><a class="nav-link text-white link-danger " href="">صفحه اصلی</a></li>
-                    <li class="nav-item "><a class="nav-link text-white link-info " href="">سیاست</a></li>
-                    <li class="nav-item "><a class="nav-link text-white link-danger " href="">اقتصاد</a></li>
-                    <li class="nav-item "><a class="nav-link text-white link-info " href="">فرهنگ</a></li>
-                    <li class="nav-item "><a class="nav-link text-white link-danger " href="">جامعه</a></li>
-                    <li class="nav-item "><a class="nav-link text-white link-info " href="">سلامت</a></li>
-                    <li class="nav-item "><a class="nav-link text-white link-danger " href="">ورزش</a></li>
-                    <li class="nav-item "><a class="nav-link text-white link-info " href="">وبلاگ</a></li>
-                </ul>
-                <input class="form-control  searchbar-section" type="search" placeholder="جستجو..." aria-label="Search">
-                    <div class="bg-danger login-icon me-4 d-flex justify-content-center align-items-center ">
-                        <div>
-                            <a href="../sign in/index.php"><i class="bi bi-person-circle fs-2 text-white"></i></a>
+<body>
+    <!-- start nav section -->
+    <nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <nav class="d-flex">
+                        <ul class="nav">
+                            <a href="../sign in/index.php">
+                                <li class="nav-item me-3"><i class="bi bi-person-circle fs-2 text-white sign-icon"></i></li>
+                            </a>
+
+                            <li class="nav-item mt-1 me-3 fw-bold"><a href=""
+                                    class="text-decoration-none fs-5 text-white">تماس با ما</a></li>
+                            <li class="nav-item mt-1 me-3 fw-bold"><a href=""
+                                    class="text-decoration-none fs-5 text-white">درباره ما</a></li>
+                            <li class="nav-item mt-1 me-3 fw-bold mt-1"><a href=""
+                                    class="text-decoration-none fs-5">خانه</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-6  d-flex justify-content-end">
+                    <a href="" class="me-2 mt-1"><i class="bi bi-chat-left-quote fs-3  nav-icon"></i></a>
+                    <a href="" class="text-decoration-none fs-3 text-white">qw</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <?php require_once __DIR__ . "/../../c/syt.php" ;  ?>
+    <!-- end nav section -->
+    <!-- start header section -->
+    <header>
+        <!-- <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 bg-info">
+                        <div class="d-flex" dir="rtl">
+                            <button class="btn btn-primary d-flex header-btn">
+                                <i class="bi bi-circle-fill ms-2"></i>
+                                <h6>گردشگری</h6>
+                            </button>
+                            <button class="btn btn-secondary d-flex me-3 header-btn">
+                                <i class="bi bi-circle-fill ms-2"></i>
+                                <h6>متنی</h6>
+                            </button>
+                            <h2 class="text-white header-h2">مفهوم صنعت چاپ و با استفاده</h2>
+                            <p class="text-white header-p">نرم افزارها شناخت بیشتری را برای طراحان رایانه‌ای علی الخصوص
+                                طراحان خلاقی و فرهنگ</p>
+                            <span class="d-flex header-span">
+                                <img class="nav-img" src="images/aref.jpg" alt="">
+                                <h5 class="text-white me-3 mt-1">با دارا ارمانی</h5>
+                                <h5 class="text-white me-3 mt-1">1403/4/21</h5>
+                                <h5 class="text-white me-3 mt-1">20 دقیقه زمان مطالعه</h5>
+                            </span>
                         </div>
                     </div>
-            </div>
-        </nav>
-    </section>
-    
-    
-    <section>
-        <h1 class="me-4 mt-3">اخبار ویژه</h1>
-        <div class="black-line"></div>
-        <div class="row">
-            <div class="col-12">
-                <div class="news-item-1 d-flex ">
-                    <img src="images/download.jfif" alt="">
-                    <a href="" class="text-decoration-none"><h4 class="text-dark me-2 mt-3">ترور اسماعیل هنیه در تهران</h4></a>
-                    <h6 class="news-text-1 fs-5">روابط عمومی کل سپاه در اطلاعیه ای از شهادت اسماعیل هنیه رئیس دفتر حماس و<br> یکی از محافظان وی ، در اثر اصابت قرار گرفتن محل اقامت آنان در تهران خبر داد . بیشتر ....</h6>
-                </div>
-                <div class="news-item-2 d-flex" dir="ltr">
-                    <img src="images/download (1).jfif" alt="">
-                    <a href="" class="text-decoration-none news-text-left-a"><h4 class="text-dark me-2 mt-3">ترور نفر دوم شاخه نظامی حزب الله در حمله اسرائیل</h4></a> 
-                    <h6 class="news-text-left-h6 fs-5">رویترز دقایقی پیش از صدای انفجار شدیدی در بیروت پایتخت لبنان خبر داد . اسکای<br> نیوز در ادامه مدعی شد که نفر دوم شاخه نظامی حزب‌الله در حمله اسرائیل ترور<br> شده است . منابع خبری العربیه مدعی شدند که فرمانده هدف قرار گرفته در لایحه<br> بیروت در اندازه عماد مغنیه بود. بیشتر ...</h6>           
-                </div>
-                <div class="news-item-3 d-flex ">
-                    <img src="images/images.jfif" alt="" class="img-3">
-                    <a href="" class="text-decoration-none"><h4 class="text-dark me-2 mt-3">پزشکیان بعد از ادای سوگند ریاست جمهوری:</h4></a>
-                    <h6 class="news-text-3 fs-5">عادی سازی روابط اقتصادی و تجاری ایران با جهان را حق مسلم ایران میدانم و برای<br> رفع تحریم های ظالمانه از پای نخواهم نشست ، این فرصتی پیش روی ایران و جهان<br> است ، آماده ایم برای مدیریت تنش گفت‌وگو کنیم . بیشتر ...</h6>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    
-    <section>
-        <div class="row" style="background-color: #003366;">
-            <div class="col-12">
-                <div class="footer mt-2">
-                    <p class="text-center text-white">تمامی حقوق مادی و معنوی این سایت متعلق به اخبار آنلاین است و استفاده از مطالب با ذکر منبع بلامانع است</p>
-                    <p class="text-center text-white">طراحی و تولید : my team</p>
-                    <div class="social-icons d-flex justify-content-center">
-                        <a class="bg-white footer-icon ms-3 d-flex justify-content-center mb-2" href=""><i class="bi bi-telegram fs-3 text-danger"></i></a>
-                        <a class="bg-white footer-icon ms-3 d-flex justify-content-center mb-2" href=""><i class="bi bi-facebook fs-3 text-danger"></i></a>
-                        <a class="bg-white footer-icon ms-3 d-flex justify-content-center mb-2" href=""><i class="bi bi-whatsapp fs-3 text-danger"></i></a>
-                        <a class="bg-white footer-icon ms-3 d-flex justify-content-center mb-2" href=""><i class="bi bi-twitter fs-3 text-danger"></i></a>
+        </section> -->
+    </header>
+    <!-- end header section -->
+    <div class="all-line container mt-3 bg-secondary"></div>
+    <!-- start first news -->
+
+    <!-- end first news -->
+    <div class="all-line container mt-3 bg-secondary"></div>
+    <!-- start second news -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 bg-light mt-3">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <i class="bi bi-linkedin fs-3 text-dark me-1"></i>
+                            <i class="bi bi-telegram fs-3 text-dark me-1"></i>
+                            <i class="bi bi-whatsapp fs-3 text-dark me-1"></i>
+                            <i class="bi bi-facebook fs-3 text-dark me-1"></i>
+                            <i class="bi bi-instagram fs-3 text-dark me-1"></i>
+                        </div>
+                        <div>
+                            <a href="" class="me-2 mt-2"><i class="bi bi-chat-left-quote fs-3  nav-icon"></i></a>
+                            <a href="" class="text-decoration-none fs-3 text-dark">qw</a>
+                        </div>
+                        <div>
+                            <h4 class="text-dark mt-1">غتنفغنفنفتسننع</h4>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    
-    <script src="app.js"></script>
+    </footer>
+    <script src="js.js"></script>
+    <!-- end footer section -->
 </body>
 
 </html>
