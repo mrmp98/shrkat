@@ -54,12 +54,12 @@ class amal_ha extends connect
     public function dell($table_name, $id)
     {
         // لیست سفید برای نام جدول
-        
-    
+
+
         try {
             $sql = "DELETE FROM $table_name WHERE id = :id";
             $stmt =   $this->conn->prepare($sql);
-             
+
             $stmt->bindParam(':id', $id);
             if ($stmt->execute()) {
                 echo "رکورد با موفقیت حذف شد.";
@@ -73,7 +73,7 @@ class amal_ha extends connect
             return false; // خطا
         }
     }
-    
+
     public function add_to_abot($table_name, $name, $password, $email, $phon, $semat)
     {
         try {
@@ -94,7 +94,7 @@ class amal_ha extends connect
             echo "Connection failed: " . $e->getMessage();
         }
     }
-    public function add_to_post($table_name, $user, $mtn , $edit , $like , $dastebandi , $titel , $seen)
+    public function add_to_post($table_name, $user, $mtn, $edit, $like, $dastebandi, $titel, $seen)
     {
         try {
             $sql = "INSERT INTO $table_name (user, mtn, edit , count_like , daste_bandi , titel , seen ) VALUES (:user, :mtn, :edit, :liike , :dastebandi ,:titel ,:seen)";
@@ -102,10 +102,10 @@ class amal_ha extends connect
             $stmt->bindParam(':user', $user);
             $stmt->bindParam(':mtn', $mtn);
             $stmt->bindParam(':edit', $edit);
-            $stmt->bindParam(':liike', $like); 
-            $stmt->bindParam(':dastebandi', $dastebandi); 
-            $stmt->bindParam(':titel', $titel); 
-            $stmt->bindParam(':seen', $seen); 
+            $stmt->bindParam(':liike', $like);
+            $stmt->bindParam(':dastebandi', $dastebandi);
+            $stmt->bindParam(':titel', $titel);
+            $stmt->bindParam(':seen', $seen);
 
             if ($stmt->execute()) {
                 echo "اطلاعات با موفقیت وارد شد.";
@@ -120,47 +120,41 @@ class amal_ha extends connect
     {
         if (basename($_SERVER['SCRIPT_FILENAME']) == 'acc.php') {
             $stmt = $this->conn->prepare("SELECT user, password, semat, email, phone FROM abote WHERE user = :user AND password = :password");
-$stmt->execute(['user' => $r, 'password' => $r2]);
-            
+            $stmt->execute(['user' => $r, 'password' => $r2]);
+
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
             return $result;
-            
         }
-        if (basename($_SERVER['SCRIPT_FILENAME']) == 'index.php') 
-        {
-            
-            if($r == 1)
-            {
-                
-                $stmt = $this->conn->prepare("SELECT `name` FROM `category` WHERE id = $r2"); 
+        if (basename($_SERVER['SCRIPT_FILENAME']) == 'index.php') {
+
+            if ($r == 1) {
+
+                $stmt = $this->conn->prepare("SELECT `name` FROM `category` WHERE id = $r2");
                 $stmt->execute();
                 $result = $stmt->fetch(PDO::FETCH_ASSOC);
-                return  ($result['name']);   
+                return ($result['name']);
             }
-            if($r == 2)
-            {
-                
+            if ($r == 2) {
+
                 $stmt = $this->conn->prepare("SELECT `mtn`, `daste_bandi`, `titel` FROM `post` WHERE id = $r2");
                 $stmt->execute();
                 $result = $stmt->fetch(PDO::FETCH_ASSOC);
-                return  ($result);
-                  
-                
-            } 
-            if($r == 3)
-            {
-                
-                $stmt = $this->conn->prepare("SELECT * FROM `abote` WHERE id = $r2")  ; 
+                return ($result);
+            }
+            if ($r == 3) {
+
+                $stmt = $this->conn->prepare("SELECT * FROM `abote` WHERE id = $r2");
                 $stmt->execute();
                 $result = $stmt->fetch(PDO::FETCH_ASSOC);
                 return  $result;
-                
-            } 
-            if($r == 4){
-                $stmt = $this->conn->prepare("SELECT * FROM `abote` WHERE user = :user");
+            }
+            if ($r == 4) {
+
+                $stmt = $this->conn->prepare("SELECT `id` FROM `abote` WHERE `user` = :user");
                 $stmt->bindParam(':user', $r2);
+                $stmt->execute();
                 $result = $stmt->fetch(PDO::FETCH_ASSOC);
-                return  $result;
+                return $result['id'];
             }
             $stmt = $this->conn->prepare('SELECT * FROM `post` WHERE 1 = 1');
             $stmt->execute();
@@ -169,24 +163,21 @@ $stmt->execute(['user' => $r, 'password' => $r2]);
         }
     }
 
-    public  function update($table_name, $id = null ,  $r1 = null, $r2 = null)
+    public  function update($table_name, $id = null,  $r1 = null, $r2 = null)
     {
         try {
             $sql = "UPDATE $table_name SET mtn = :mtn, titel = :titel WHERE id = $id";
             $stmt = $this->conn->prepare($sql);
             $stmt->bindParam(':mtn', $r1);
             $stmt->bindParam(':titel', $r2);
-        
+
             if ($stmt->execute()) {
-                
+
                 echo "اطلاعات با موفقیت به‌روزرسانی شد.";
             } else {
                 echo "خطا در به‌روزرسانی اطلاعات: " . print_r($stmt->errorInfo(), true);
             }
-            
-        } 
-        catch (PDOException $e)
-         {
+        } catch (PDOException $e) {
             echo "Connection failed: " . $e->getMessage();
         }
     }
