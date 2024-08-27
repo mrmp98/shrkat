@@ -11,4 +11,3 @@ postElements.forEach(postElement => {
     postElement.innerHTML = truncatedText;
     
 });
-console.log('okییییی') ; 

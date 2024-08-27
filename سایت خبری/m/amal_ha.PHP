@@ -121,7 +121,7 @@ class amal_ha extends connect
         if (basename($_SERVER['SCRIPT_FILENAME']) == 'acc.php') {
             $stmt = $this->conn->prepare("SELECT user, password, semat, email, phone FROM abote WHERE user = :user AND password = :password");
 $stmt->execute(['user' => $r, 'password' => $r2]);
- 
+            
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
             return $result;
             
@@ -149,8 +149,16 @@ $stmt->execute(['user' => $r, 'password' => $r2]);
             } 
             if($r == 3)
             {
+                
                 $stmt = $this->conn->prepare("SELECT * FROM `abote` WHERE id = $r2")  ; 
                 $stmt->execute();
+                $result = $stmt->fetch(PDO::FETCH_ASSOC);
+                return  $result;
+                
+            } 
+            if($r == 4){
+                $stmt = $this->conn->prepare("SELECT * FROM `abote` WHERE user = :user");
+                $stmt->bindParam(':user', $r2);
                 $result = $stmt->fetch(PDO::FETCH_ASSOC);
                 return  $result;
             }

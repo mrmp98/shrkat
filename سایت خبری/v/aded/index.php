@@ -27,7 +27,7 @@
             <textarea id="myTextarea" name="myTextarea" rows="20" cols="50"  placeholder="خبر خود را بنویسید"></textarea>
             <br>
             <br>
-            <button type="submit" name="submmit" style="width: 200px; height: 40px; background-color: black; color: white; cursor: pointer ; display: flex; " id="">ویرایش خبر </button>
+            <button type="submit" name="submmit" style="width: 200px; height: 40px; background-color: black; color: white; cursor: pointer ; display: flex; " id="">ثبت خبر  </button>
             <button type="button" onclick="window.location.href='../acc/../mosharekat/index.php'">بازگشت</button>
         </form>
     </div>

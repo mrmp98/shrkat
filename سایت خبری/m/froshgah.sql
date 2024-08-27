@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 26, 2024 at 09:17 PM
+-- Generation Time: Aug 27, 2024 at 03:56 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -44,17 +44,6 @@ CREATE TABLE `abote` (
 --
 
 INSERT INTO `abote` (`id`, `user`, `password`, `semat`, `count_post`, `login`, `count_edit`, `email`, `phone`) VALUES
-(1, 'mr_pasban', '12345', '09148691426', NULL, '2024-08-14 13:22:51', NULL, '1', 0),
-(2, 'aref', 'jami', '09155631125', NULL, '2024-08-15 16:49:06', NULL, '1', 0),
-(3, 'aref', 'jami', '09151604855', NULL, '2024-08-15 17:35:00', NULL, '1', 0),
-(4, 'aref', 'jami', '09151604855', NULL, '2024-08-15 17:35:51', NULL, '1', 0),
-(5, 'aref', 'jami', '09151604855', NULL, '2024-08-15 17:35:54', NULL, '1', 0),
-(6, 'aref', 'jami', '09151604855', NULL, '2024-08-15 17:36:24', NULL, '1', 0),
-(7, 'aref', 'jami', '09151604855', NULL, '2024-08-15 17:37:05', NULL, '1', 0),
-(8, 'aref', 'jami', '09151604855', NULL, '2024-08-15 17:37:16', NULL, '1', 0),
-(9, 'aref', 'jami', '09151604855', NULL, '2024-08-15 17:37:46', NULL, '1', 0),
-(10, 'aref', 'jami', '09151604855', NULL, '2024-08-15 17:58:43', NULL, '1', 0),
-(11, 'aref', 'jami', '09155631125', NULL, '2024-08-15 19:00:09', NULL, '1', 0),
 (12, 'admin', 'admin', '1', NULL, '2024-08-23 14:09:21', NULL, 'amirmp2332@gmail.com', 2147483647),
 (13, 'Ellie Jast', 'C5)DWR4', '1', NULL, '2024-08-26 01:16:06', NULL, 'nSchaden@Bergstrom.com', 2147483647),
 (14, 'Mr. Brennon Buckridge DDS', 'k)MNCb\\KY=6XHN:\\d=~', '1', NULL, '2024-08-26 01:16:06', NULL, 'Camden87@Wilkinson.org', 2147483647),
@@ -461,8 +450,7 @@ INSERT INTO `abote` (`id`, `user`, `password`, `semat`, `count_post`, `login`, `
 (415, 'Ricardo Ullrich', '?|S6ph', '1', NULL, '2024-08-26 01:16:06', NULL, 'Justen.Romaguera@Sauer.com', 2147483647),
 (416, 'Dr. Jerod Grimes I', 'Ssd?&`M]Zf\"', '1', NULL, '2024-08-26 01:16:06', NULL, 'Lyric.Ratke@yahoo.com', 2147483647),
 (417, 'Cheyanne Hettinger Sr.', 'cbV2Vlk>0xDi>', '1', NULL, '2024-08-26 01:16:06', NULL, 'Cara21@Reynolds.com', 2147483647),
-(418, 'Dashawn Kiehn', 'tp<e8c-YUM-BGpy', '1', NULL, '2024-08-26 01:16:06', NULL, 'Augustine.Cremin@yahoo.com', 2147483647);
-INSERT INTO `abote` (`id`, `user`, `password`, `semat`, `count_post`, `login`, `count_edit`, `email`, `phone`) VALUES
+(418, 'Dashawn Kiehn', 'tp<e8c-YUM-BGpy', '1', NULL, '2024-08-26 01:16:06', NULL, 'Augustine.Cremin@yahoo.com', 2147483647),
 (419, 'Arvilla Nitzsche', 'vdx19r=dp', '1', NULL, '2024-08-26 01:16:06', NULL, 'rWeissnat@Oberbrunner.com', 2147483647),
 (420, 'Beulah Zulauf', 'y!.:fI|peYDN4', '1', NULL, '2024-08-26 01:16:06', NULL, 'Calista98@Quigley.org', 2147483647),
 (421, 'Prof. Hillary Beatty', '48lN\'pn7l]U4t', '1', NULL, '2024-08-26 01:16:06', NULL, 'Mckayla03@yahoo.com', 2147483647),
@@ -470,7 +458,8 @@ INSERT INTO `abote` (`id`, `user`, `password`, `semat`, `count_post`, `login`, `
 (423, 'Warren Wilkinson', '?~(\']XN`FiD+SKV\'', '1', NULL, '2024-08-26 01:16:06', NULL, 'mBlanda@gmail.com', 2147483647),
 (424, 'Earnest Koepp', 'aY\\VKSm=Q+$uXRJ', '1', NULL, '2024-08-26 01:16:06', NULL, 'Micaela51@hotmail.com', 2147483647),
 (425, 'Jada Dietrich', '*6)jf2X.benJFpwHfw', '1', NULL, '2024-08-26 01:16:07', NULL, 'Sandrine53@VonRueden.org', 2147483647),
-(426, 'Odell Fahey', ')&`uo.w,Yyf\\f,Niw', '1', NULL, '2024-08-26 01:16:07', NULL, 'Bechtelar.Ole@hotmail.com', 2147483647),
+(426, 'Odell Fahey', ')&`uo.w,Yyf\\f,Niw', '1', NULL, '2024-08-26 01:16:07', NULL, 'Bechtelar.Ole@hotmail.com', 2147483647);
+INSERT INTO `abote` (`id`, `user`, `password`, `semat`, `count_post`, `login`, `count_edit`, `email`, `phone`) VALUES
 (427, 'Prof. Karlie Raynor', 'BRxqMGS./', '1', NULL, '2024-08-26 01:16:07', NULL, 'gHarber@hotmail.com', 2147483647),
 (428, 'Kari Hand MD', '0!7b3,xzQ/]WGuj', '1', NULL, '2024-08-26 01:16:07', NULL, 'xWisoky@yahoo.com', 2147483647),
 (429, 'Elmer Beer', '4g;c*R9RQrVec~vX/3', '1', NULL, '2024-08-26 01:16:07', NULL, 'Spencer.Joey@Ward.com', 2147483647),
@@ -878,8 +867,7 @@ INSERT INTO `abote` (`id`, `user`, `password`, `semat`, `count_post`, `login`, `
 (831, 'Sage Reinger', '|cZ9=%k}AaxKh0mf!', '1', NULL, '2024-08-26 01:16:07', NULL, 'gRosenbaum@Rutherford.org', 2147483647),
 (832, 'Roselyn Boehm', 'K@FnPNIuoidotBp`', '1', NULL, '2024-08-26 01:16:07', NULL, 'pJohnson@Effertz.org', 2147483647),
 (833, 'Kiana Rosenbaum', 'gL/A,24=QrEa@u', '1', NULL, '2024-08-26 01:16:07', NULL, 'Hammes.Jaron@Muller.biz', 2147483647),
-(834, 'Enrique Block', 'LkJU1ROo^w,r@', '1', NULL, '2024-08-26 01:16:07', NULL, 'Sean.Kunde@OKeefe.com', 2147483647);
-INSERT INTO `abote` (`id`, `user`, `password`, `semat`, `count_post`, `login`, `count_edit`, `email`, `phone`) VALUES
+(834, 'Enrique Block', 'LkJU1ROo^w,r@', '1', NULL, '2024-08-26 01:16:07', NULL, 'Sean.Kunde@OKeefe.com', 2147483647),
 (835, 'Mrs. Hortense Kulas IV', 'e><uC=Ow}1_j', '1', NULL, '2024-08-26 01:16:07', NULL, 'Goyette.Jaquelin@Kilback.info', 2147483647),
 (836, 'Tobin Kuphal', '~<8yNG.W\"|=Z%\"80Tu', '1', NULL, '2024-08-26 01:16:07', NULL, 'aSchaefer@gmail.com', 2147483647),
 (837, 'Adolphus Crona', '.?x_jD86)|mp?x\"', '1', NULL, '2024-08-26 01:16:07', NULL, 'Laila.Schmitt@yahoo.com', 2147483647),
@@ -887,7 +875,8 @@ INSERT INTO `abote` (`id`, `user`, `password`, `semat`, `count_post`, `login`, `
 (839, 'Maia Mueller', ')Iz!AE6', '1', NULL, '2024-08-26 01:16:07', NULL, 'Maye06@Crooks.com', 2147483647),
 (840, 'Ryann Orn', '\'X\\]D^^QK%TO', '1', NULL, '2024-08-26 01:16:07', NULL, 'Hudson.Rhianna@yahoo.com', 2147483647),
 (841, 'Neoma Mertz IV', 'X2?Ijd=C', '1', NULL, '2024-08-26 01:16:07', NULL, 'Josiane63@yahoo.com', 2147483647),
-(842, 'Douglas Thompson', '\\[aBUOsxTNI1)h,q#', '1', NULL, '2024-08-26 01:16:07', NULL, 'Makayla56@Schneider.com', 2147483647),
+(842, 'Douglas Thompson', '\\[aBUOsxTNI1)h,q#', '1', NULL, '2024-08-26 01:16:07', NULL, 'Makayla56@Schneider.com', 2147483647);
+INSERT INTO `abote` (`id`, `user`, `password`, `semat`, `count_post`, `login`, `count_edit`, `email`, `phone`) VALUES
 (843, 'Tito Hilll', 'z@Ul;,oxsoN==t,,K;', '1', NULL, '2024-08-26 01:16:07', NULL, 'qKuphal@Daugherty.com', 2147483647),
 (844, 'Jessika Ward', 'Ob_VHd7vSo[(', '1', NULL, '2024-08-26 01:16:07', NULL, 'Brain.Nolan@hotmail.com', 2147483647),
 (845, 'Ambrose Stoltenberg IV', 'Rm^>pnzZ3Z-]:~x~K', '1', NULL, '2024-08-26 01:16:07', NULL, 'Danyka20@DuBuque.info', 2147483647),
@@ -1093,9 +1082,9 @@ CREATE TABLE `post` (
   `edit` int(11) DEFAULT NULL,
   `count_like` int(11) DEFAULT NULL,
   `daste_bandi` int(11) NOT NULL,
-  `titel` varchar(40) NOT NULL,
+  `titel` varchar(100) NOT NULL,
   `seen` int(11) DEFAULT NULL,
-  `zman` date NOT NULL
+  `zman` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -1103,9 +1092,11 @@ CREATE TABLE `post` (
 --
 
 INSERT INTO `post` (`id`, `user`, `mtn`, `edit`, `count_like`, `daste_bandi`, `titel`, `seen`, `zman`) VALUES
-(2, 1, '\r\nوزیر پیشنهادی ارتباطات و فناوری اطلاعات گفت::  با تأسی از مولای متقیان و تعهد رئیس جمهور گردنم را در گرو تعهداتم می‌گذارم و با صدای بلند اعلام می‌کنم که در صورت اعتماد نمایندگان مردم وزارت من ادامه وزارت هیچ‌کس نخواهد بود.\r\n\r\nبه گزارش همشهری آنلاین، ستار هاشمی افزود: متعهد هستم که من سید ستار هاشمی فرزند مردم ایران اگر مورد اعتماد شما قرار گیرم همانگونه که تاکنون بر مبنای رضایت الهی و قوانین و مقررات نظام مقدس اسلامی حرکت کرده‌ام بدون هیچ وابستگی به فرد یا گروهی و تنها در خدمت دولت محترم وفاق ملی مدافع منافع ملی ایران باشم و با رعایت اصول عدالت و انصاف با صداقت و شفافیت نسبت به وظایف محوله همواره پاسخگو باشم.\r\n\r\nوی ادامه داد: با تأسی از مولای متقیان و تعهد رئیس جمهور گردنم را در گرو تعهداتم می‌گذارم و با صدای بلند اعلام می‌کنم که در صورت اعتماد نمایندگان مردم وزارت من ادامه وزارت هیچ‌کس نخواهد بود و در اداره وزارتخانه ضمن استفاده گسترده از نظرات مشورتی کارشناسان و متخصصان هرگز اجازه مخدوش شدن استقلال عمل وزیر در اداره وزارتخانه را نخواهم داد.', NULL, NULL, 1, 'وزیر ', NULL, '2024-08-21'),
-(3, 2, 'رهعهعراهعیراهعارارسیهارسههاذهاهعاسیهعرساعهرسیهعرسیهعاسرهعاسریهعارسیهعاریسهلذهعاربیهعاربیهعغصثقله7ثقلهاصثلعثقلهاهعارثقلعهاغقلاصثقلهعارقلهعاثقذهذرقهعتابثلخهحتبثهعلگثکثگلرثلهعحارلکلاثصکحکرثقذکارقذکحرقذکاقذکاقذکککککککاددرکارقذکحالکرلکثقلاقلحکقلارقکحارقذلععقرالهعارقل', NULL, NULL, 1, 'عارف جامی ', NULL, '2024-08-08'),
-(4, 2, 'gfdgfdgdfgdfgdgegtgrehxgetrghrdhyregbdgfhxhgre', NULL, NULL, 2, 'slm', NULL, '2024-08-15');
+(2, 14, 'وزیر پیشنهادی ارتباطات و فناوری اطلاعات گفت::  با تأسی از مولای متقیان و تعهد رئیس جمهور گردنم را در گرو تعهداتم می‌گذارم و fبا صدای بلند اعلام می‌کنم که در صورت اعتماد نمایندگان مردم وزارت من ادامه وزارت هیچ‌کس نخواهد بود.&amp;#13;&amp;#10;&amp;#13;&amp;#10;به گزارش همشهری آنلاین، ستار هاشمی افزود: متعهد هستم که من سید ستار هاشمی فرزند مردم ایران اگر مورد اعتماد شما قرار گیرم همانگونه که تاکنون بر مبنای رضایت الهی و قوانین و مقررات نظام مقدس اسلامی حرکت کرده‌ام بدون هیچ وابستگی به فرد یا گروهی و تنها در خدمت دولت محترم وفاق ملی مدافع منافع ملی ایران باشم و با رعایت اصول عدالت و انصاف با صداقت و شفافیت نسبت به وظایف محوله همواره پاسخگو باشم.&amp;#13;&amp;#10;&amp;#13;&amp;#10;وی ادامه داد: با تأسی از مولای متقیان و تعهد رئیس جمهور گردنم را در گرو تعهداتم می‌گذارم و با صدای بلند اعلام می‌کنم که در صورت اعتماد نمایندگان مردم وزارت من ادامه وزارت هیچ‌کس نخواهد بود و در اداره وزارتخانه ضمن استفاده گسترده از نظرات مشورتی کارشناسان و متخصصان هرگز اجازه مخدوش شدن استقلال عمل وزیر در اداره وزارتخانه را نخواهم داد.', NULL, NULL, 1, 'وزیر ', NULL, '2024-08-21'),
+(3, 21, 'رهعهعراهعیراهعارارسیهارسههاذهاهعاسیهعرساعهرسیهعرسیهعاسرهعاسریهعارسیهعاریسهلذهعاربیهعاربیهعغصثقله7ثقلهاصثلعثقلهاهعارثقلعهاغقلاصثقلهعارقلهعاثقذهذرقهعتابثلخهحتبثهعلگثکثگلرثلهعحارلکلاثصکحکرثقذکارقذکحرقذکاقذکاقذکککککککاددرکارقذکحالکرلکثقلاقلحکقلارقکحارقذلععقرالهعارقل', NULL, NULL, 1, 'عارف جامی ', NULL, '2024-08-08'),
+(4, 28, 'gfdgfdgdfgdfgdgegtgrehxgetrghrdhyregbdgfhxhgre', NULL, NULL, 2, 'slm', NULL, '2024-08-15'),
+(5, 78, 'l;ml;m;,k;k;,ko;', 1, 1, 1, ',l;,m;lmlkm', 1, '0000-00-00'),
+(6, 0, 'qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq  qqq q q q q q q q q  q q q q q q  q q q q q q', 1, 1, 1, 'test', 1, '2024-08-27');
 
 --
 -- Indexes for dumped tables
@@ -1150,7 +1141,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

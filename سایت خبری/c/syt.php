@@ -7,6 +7,25 @@ class safe  extends amal_ha
         parent::__construct();
         $this->seen() ; 
     }
+    public function calculateReadingTime($text) {
+        $wordsPerMinute = 200; // تعداد کلمات در دقیقه
+        
+        // تقسیم متن به کلمات و فیلتر کردن کلمات خالی
+        $words = preg_split('/\s+/', trim($text));
+        $wordCount = count(array_filter($words, function($word) {
+            return strlen($word) > 0;
+        }));
+        $minutes = $wordCount / $wordsPerMinute;
+        $seconds = round($minutes * 60);
+        
+        $r =  [
+            'minutes' => floor($minutes),
+            'seconds' => $seconds % 60
+        ];
+        $readingTime = $r;
+        $qw = "زمان خواندن: {$readingTime['minutes']} دقیقه و {$readingTime['seconds']} ثانیه";
+        return $qw;
+    }
     public function selektt($w , $w2)
     {
        return $this->selekt($w , $w2)  ;
@@ -17,20 +36,19 @@ class safe  extends amal_ha
         $p[] = $this->selekt();
         for ($i = 0; $i <count($p[0]); $i++)
          { 
-       
+            
             print_r("
     <a href='../seene/index.php?id={$p[0][$i]['id']}'>
         
             <div class='container'>
             <div class='row'>
                 <div class='col-12  mt-3 d-flex'>
-                    <div class='col-6  d-flex justify-content-around post' style='color : white'>
-                   
-                        
-                            <p class='text-white' dir='rtl'>
+                <h4 class='mt-3 text-white bi bi-card-text'> " . $p[0][$i]['titel'] . "</h4>
+                <i class='bi bi-chat-dots-fill'></i>    
+                <div class='col-6  d-flex justify-content-around post' style='color : white'>      
+                            <p class='text-white'dir='rtl'>
                            " . $p[0][$i]['mtn'] . "
-                            </p>
-                       
+                            </p>                      
                     </div>
                     <div class='col-6 ' dir='rtl'>
                         <div class='d-flex'>
@@ -38,14 +56,11 @@ class safe  extends amal_ha
                                 <i class='bi bi-circle-fill ms-2'></i>
                                 <h6>" .$this->selektt(1 , $p[0][$i]['daste_bandi']). "</h6>
                             </button>
-                            
                         </div>
-                        <h4 class='mt-3 text-white'> " . $p[0][$i]['titel'] . "</h4>
                         <span class='d-flex'>
-                            <h6 class='text-white me-3 '>" .$this->selektt(3 ,$p[0][$i]['user'])['user']. "</h6>
+                            <h6 class='text-white me-3 bi bi-person'>" .$this->selektt(3,$p[0][$i]['user'])['user']. "</h6>
                             <h6 class='text-white me-3 dete-section'>" . $p[0][$i]['zman'] . "</h6>
-                            <h5 class='text-white me-3 mt-1 time-section'><i class='bi bi-clock ms-2'></i>20 دقیقه زمان
-                                مطالعه</h5>
+                            <h5 class='text-white me-3 mt-1 time-section'><i class='bi bi-clock ms-2'></i>" .$this->calculateReadingTime($p[0][$i]['mtn']). "</h5>
                         </span>
                     </div>
                 </div>
@@ -55,9 +70,7 @@ class safe  extends amal_ha
         </a>");
                   
         }
-        
-        
     }
-
     }
 $safe = new safe() ; 
+ 
