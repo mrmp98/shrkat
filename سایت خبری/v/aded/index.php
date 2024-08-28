@@ -12,7 +12,30 @@
 <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap" rel="stylesheet">
 </head>
 <body style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
-     
+<div class="dropdown">
+<button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+    موضوع پست 
+</button>
+<ul class="dropdown-menu">
+    <li class="dropdown-item">ورزشی</li>
+    <li class="dropdown-item">سیاسی</li>
+    <li class="dropdown-item">خاورمیانه</li>
+</ul>
+
+<script>
+  // انتخاب همه عناصر dropdown-item
+  var items = document.querySelectorAll('.dropdown-item');
+  var dropdownToggle = document.querySelector('.dropdown-toggle');
+  
+  items.forEach(function(item) {
+    item.addEventListener('click', function() {
+      dropdownToggle.innerHTML = this.innerHTML; // تغییر متن دکمه
+        // this is bog
+      console.log(this.innerHTML); // چاپ متن جدید در کنسول
+    });
+  });
+</script>
+
     <br>
     <br>
     <br>
