@@ -156,7 +156,7 @@ class amal_ha extends connect
                 $result = $stmt->fetch(PDO::FETCH_ASSOC);
                 return $result['id'];
             }
-            if($r == 0){
+            if($r == 5){
                 $stmt = $this->conn->prepare("SELECT `mtn` , `titel` FROM `post` WHERE id = $r2;");
                 $stmt->execute();
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
