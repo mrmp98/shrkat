@@ -3,51 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 27, 2024 at 03:56 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `froshgah`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `abote`
---
-
-CREATE TABLE `abote` (
-  `id` int(11) NOT NULL,
-  `user` varchar(250) NOT NULL,
-  `password` varchar(250) NOT NULL,
-  `semat` varchar(11) NOT NULL,
-  `count_post` int(11) DEFAULT NULL,
-  `login` datetime NOT NULL DEFAULT current_timestamp(),
-  `count_edit` int(11) DEFAULT NULL,
-  `email` varchar(255) NOT NULL,
-  `phone` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Dumping data for table `abote`
---
--- phpMyAdmin SQL Dump
--- version 5.2.1
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Aug 28, 2024 at 12:58 PM
+-- Generation Time: Aug 28, 2024 at 01:06 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -81,7 +37,7 @@ CREATE TABLE `abote` (
   `count_edit` int(11) DEFAULT NULL,
   `email` varchar(255) NOT NULL,
   `phone` varchar(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `abote`
@@ -1091,7 +1047,8 @@ INSERT INTO `abote` (`id`, `user`, `password`, `semat`, `count_post`, `login`, `
 (1010, 'Doug Yundt PhD', 'RUDkE}-\\ZWc2M\\3T`h', '1', NULL, '2024-08-26 01:16:07', NULL, 'gKeebler@Jakubowski.biz', '2147483647'),
 (1011, 'Adrain Dietrich', 'vNRV7rj$5?', '1', NULL, '2024-08-26 01:16:07', NULL, 'Bradtke.Caleigh@hotmail.com', '2147483647'),
 (1012, 'Prof. Melvin Zemlak Jr.', 'GI@D]&', '1', NULL, '2024-08-26 01:16:07', NULL, 'Guillermo09@yahoo.com', '2147483647'),
-(1013, 'Tristian Bartoletti', ')}xp\'~r\\', '1', NULL, '2024-08-26 01:16:07', NULL, 'Kuvalis.Mariano@Kuhic.net', '2147483647');
+(1013, 'Tristian Bartoletti', ')}xp\'~r\\', '1', NULL, '2024-08-26 01:16:07', NULL, 'Kuvalis.Mariano@Kuhic.net', '2147483647'),
+(1014, 'ونسمکنیرسحنریس', 'گرئیسممونریسوسیر', '1', 1, '2024-08-28 14:35:07', 5, 'سیزئخحزیخحیزسخ', '09155631125');
 
 -- --------------------------------------------------------
 
@@ -1102,7 +1059,7 @@ INSERT INTO `abote` (`id`, `user`, `password`, `semat`, `count_post`, `login`, `
 CREATE TABLE `category` (
   `id` int(11) NOT NULL,
   `name` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `category`
@@ -1129,7 +1086,7 @@ CREATE TABLE `post` (
   `titel` varchar(100) NOT NULL,
   `seen` int(11) DEFAULT NULL,
   `zman` date NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `post`
@@ -1176,7 +1133,7 @@ ALTER TABLE `post`
 -- AUTO_INCREMENT for table `abote`
 --
 ALTER TABLE `abote`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1014;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1015;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -1189,105 +1146,6 @@ ALTER TABLE `category`
 --
 ALTER TABLE `post`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `category`
---
-
-CREATE TABLE `category` (
-  `id` int(11) NOT NULL,
-  `name` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `category`
---
-
-INSERT INTO `category` (`id`, `name`) VALUES
-(1, 'ورزشی '),
-(2, 'سیاسی '),
-(3, 'خاورمیانه ');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `post`
---
-
-CREATE TABLE `post` (
-  `id` int(11) NOT NULL,
-  `user` int(11) NOT NULL,
-  `mtn` longtext NOT NULL,
-  `edit` int(11) DEFAULT NULL,
-  `count_like` int(11) DEFAULT NULL,
-  `daste_bandi` int(11) NOT NULL,
-  `titel` varchar(100) NOT NULL,
-  `seen` int(11) DEFAULT NULL,
-  `zman` date NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `post`
---
-
-INSERT INTO `post` (`id`, `user`, `mtn`, `edit`, `count_like`, `daste_bandi`, `titel`, `seen`, `zman`) VALUES
-(2, 14, 'وزیر پیشنهادی ارتباطات و فناوری اطلاعات گفت::  با تأسی از مولای متقیان و تعهد رئیس جمهور گردنم را در گرو تعهداتم می‌گذارم و fبا صدای بلند اعلام می‌کنم که در صورت اعتماد نمایندگان مردم وزارت من ادامه وزارت هیچ‌کس نخواهد بود.&amp;#13;&amp;#10;&amp;#13;&amp;#10;به گزارش همشهری آنلاین، ستار هاشمی افزود: متعهد هستم که من سید ستار هاشمی فرزند مردم ایران اگر مورد اعتماد شما قرار گیرم همانگونه که تاکنون بر مبنای رضایت الهی و قوانین و مقررات نظام مقدس اسلامی حرکت کرده‌ام بدون هیچ وابستگی به فرد یا گروهی و تنها در خدمت دولت محترم وفاق ملی مدافع منافع ملی ایران باشم و با رعایت اصول عدالت و انصاف با صداقت و شفافیت نسبت به وظایف محوله همواره پاسخگو باشم.&amp;#13;&amp;#10;&amp;#13;&amp;#10;وی ادامه داد: با تأسی از مولای متقیان و تعهد رئیس جمهور گردنم را در گرو تعهداتم می‌گذارم و با صدای بلند اعلام می‌کنم که در صورت اعتماد نمایندگان مردم وزارت من ادامه وزارت هیچ‌کس نخواهد بود و در اداره وزارتخانه ضمن استفاده گسترده از نظرات مشورتی کارشناسان و متخصصان هرگز اجازه مخدوش شدن استقلال عمل وزیر در اداره وزارتخانه را نخواهم داد.', NULL, NULL, 1, 'وزیر ', NULL, '2024-08-21'),
-(3, 21, 'رهعهعراهعیراهعارارسیهارسههاذهاهعاسیهعرساعهرسیهعرسیهعاسرهعاسریهعارسیهعاریسهلذهعاربیهعاربیهعغصثقله7ثقلهاصثلعثقلهاهعارثقلعهاغقلاصثقلهعارقلهعاثقذهذرقهعتابثلخهحتبثهعلگثکثگلرثلهعحارلکلاثصکحکرثقذکارقذکحرقذکاقذکاقذکککککککاددرکارقذکحالکرلکثقلاقلحکقلارقکحارقذلععقرالهعارقل', NULL, NULL, 1, 'عارف جامی ', NULL, '2024-08-08'),
-(4, 28, 'gfdgfdgdfgdfgdgegtgrehxgetrghrdhyregbdgfhxhgre', NULL, NULL, 2, 'slm', NULL, '2024-08-15'),
-(5, 78, 'l;ml;m;,k;k;,ko;', 1, 1, 1, ',l;,m;lmlkm', 1, '0000-00-00'),
-(6, 0, 'qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq  qqq q q q q q q q q  q q q q q q  q q q q q q', 1, 1, 1, 'test', 1, '2024-08-27');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `abote`
---
-ALTER TABLE `abote`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `user` (`user`);
-
---
--- Indexes for table `category`
---
-ALTER TABLE `category`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `post`
---
-ALTER TABLE `post`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `abote`
---
-ALTER TABLE `abote`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1014;
-
---
--- AUTO_INCREMENT for table `category`
---
-ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `post`
---
-ALTER TABLE `post`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
