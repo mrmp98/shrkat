@@ -136,9 +136,9 @@ class amal_ha extends connect
             }
             if ($r == 2) {
 
-                $stmt = $this->conn->prepare("SELECT `mtn`, `daste_bandi`, `titel` FROM `post` WHERE id = $r2");
+                $stmt = $this->conn->prepare("SELECT `id` , `seen` , `edit` ,   `mtn`, `daste_bandi`, `titel` FROM `post` WHERE user = $r2");
                 $stmt->execute();
-                $result = $stmt->fetch(PDO::FETCH_ASSOC);
+                $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 return ($result);
             }
             if ($r == 3) {

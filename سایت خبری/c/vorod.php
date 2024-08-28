@@ -14,7 +14,6 @@ class qw extends amal_ha
   }
   public function  vorod()
   {
-    
     if (isset($_POST['submit'])) 
     {
       if (!empty($_POST['username'])) 
@@ -29,8 +28,6 @@ class qw extends amal_ha
           } 
           else 
           {
-              
-  
                 echo "<script>alert('اطلعات شما ثبت نشده است ')</script>";
               
               header('Location: ../sign up/singup.php');
@@ -44,7 +41,6 @@ class qw extends amal_ha
   } else {
       echo '<script>alert("فرم ارسال نشده است")</script>';
   }
-  
   }
   public function sbtnam()
   {
@@ -52,9 +48,7 @@ class qw extends amal_ha
      {  
       if(!empty($_POST['name']))
       {
-
         $this->add_to_abot('abote', $this->xss($_POST['name'],FILTER_SANITIZE_SPECIAL_CHARS)  , $this->xss($_POST['password'] , FILTER_SANITIZE_SPECIAL_CHARS) , $this->xss($_POST['email'] , FILTER_VALIDATE_EMAIL )  , $this->xss($_POST['phone']  , FILTER_SANITIZE_NUMBER_INT ), '1')  ;
-
         $_SESSION['filename'] = 'sbtnam' ; 
         $_SESSION['name'] = $_POST['name'] ; 
         $_SESSION['password'] = $_POST['password'] ; 
@@ -62,7 +56,6 @@ class qw extends amal_ha
         $_SESSION['semat'] = 'کاربر عادی ' ; 
         $_SESSION['emil'] = $_POST['email'] ; 
         echo '<script>alert("اطلعات شما ذخیره شد ")'; 
-        
         header('Location: ../acc/acc.php');
         exit(); 
       }

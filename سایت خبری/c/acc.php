@@ -20,7 +20,6 @@ class qw extends amal_ha
   public function sbtnam () 
   {
   $this->ScriptCode("#user_1name" , $_SESSION['name']);
-  $this->ScriptCode('#user_1name', $_SESSION['name']);
   $this->ScriptCode('#pass', $_SESSION['password']);
   $this->ScriptCode('#phone', $_SESSION['phone']);
   $this->ScriptCode('#semat', $_SESSION['semat']);
@@ -29,19 +28,28 @@ class qw extends amal_ha
   } 
   public function admin ($r) 
   {
+    if($r == 2)
+    {
+       
+      $_SESSION['vaziyat'] = 'admin' ; 
+      return 'ادمین' ; 
+    }else
+    {  
+      $_SESSION['vaziyat'] = 'karbar';
+      return 'کاربر عادی ' ;
+    }
 
-    return ($r == '1') ? 'کاربر عادی' : 'admin'  ; 
   }
   public function vorod()
   {
+
     unset($_SESSION['filename']);
     
   $t[] = ( $this->selekt($_SESSION['username'], $_SESSION['password'])) ;
-  
-    $this->ScriptCode('#user_1name' , $t[0]['user']);
-    $this->ScriptCode('#emil_1', $t[0]['email']);
-    $this->ScriptCode('#pass',   $t[0]['password']);
-    $this->ScriptCode('#semat',  $this->admin($t[0]['semat']));
+  $this->ScriptCode('#user_1name' , $t[0]['user']);
+  $this->ScriptCode('#emil_1', $t[0]['email']);
+  $this->ScriptCode('#pass',   $t[0]['password']);
+  $this->ScriptCode('#semat',  $this->admin($t[0]['semat']));
     $this->ScriptCode('#phone',  $t[0]['phone']);
     
   }

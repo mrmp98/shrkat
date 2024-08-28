@@ -24,8 +24,6 @@
             
          if(isset($_SESSION['username']) )
          {
-          // echo  $_SESSION['username'] ;
-          // exit ; 
           
           $e =   $this->selekt(4, $_SESSION['username']) ;
         
