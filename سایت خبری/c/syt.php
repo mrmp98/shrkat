@@ -43,7 +43,7 @@ class safe  extends amal_ha
             <div class='container'>
             <div class='row'>
                 <div class='col-12  mt-3 d-flex'>
-                <h4 class='mt-3 text-white bi bi-card-text'> " . $p[0][$i]['titel'] . "</h4>
+                <h4 class='mt-3 text-white bi bi-card-text y'> " . $p[0][$i]['titel'] . "</h4>
                 <i class='bi bi-chat-dots-fill'></i>    
                 <div class='col-6  d-flex justify-content-around post' style='color : white'>      
                             <p class='text-white'dir='rtl'>
@@ -67,7 +67,23 @@ class safe  extends amal_ha
             </div>
         </div>
         <hr style='color : white'>
-        </a>");
+        </a>
+         <script>
+        function truncateText(element, length) {
+    let text = element.textContent;
+    let truncatedText = '...' + text.slice(0, length) ;
+    return truncatedText;
+}
+
+let postElements = document.querySelectorAll('.y');
+
+postElements.forEach(postElement => {
+    let truncatedText = truncateText(postElement,1);
+    postElement.innerHTML = truncatedText;
+    
+});
+     </script>
+        ");
                   
         }
     }

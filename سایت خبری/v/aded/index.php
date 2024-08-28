@@ -29,10 +29,9 @@
   
   items.forEach(function(item) {
     item.addEventListener('click', function() {
-      dropdownToggle.innerHTML = this.innerHTML; // تغییر متن دکمه
-        // this is bog
-      console.log(this.innerHTML); // چاپ متن جدید در کنسول
-    });
+        (this.innerHTML);     
+      dropdownToggle.innerHTML = this.innerHTML; 
+        });
   });
 </script>
 
@@ -60,5 +59,6 @@
     
 
     <script src="index.js"></script>
+    
 </body>
 </html>

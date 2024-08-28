@@ -7,7 +7,7 @@ function truncateText(element, length) {
 let postElements = document.querySelectorAll(".post");
 
 postElements.forEach(postElement => {
-    let truncatedText = truncateText(postElement, 200);
+    let truncatedText = truncateText(postElement,50);
     postElement.innerHTML = truncatedText;
     
 });
