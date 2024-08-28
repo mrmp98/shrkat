@@ -27,8 +27,11 @@ class added extends amal_ha
     }
     public function qw($r , $r2)
     {
-       $p[] =  $this->selekt('2' , $this->get() ) ;
-        print_r($p[$r][$r2]) ;
+        
+       $p[] =  $this->selekt(0 , $this->get() ) ;
+        
+        print_r($p[0][$r][$r2]) ;
+           
     }
     public function get ()  
     {
