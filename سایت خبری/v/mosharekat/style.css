@@ -1,1 +1,58 @@
-#div,.i{background-color:#000}body{background-color:#5f9ea0}#mama{background-color:#6f777e}table,td,th{border:1px solid #000;border-collapse:collapse}table{width:100%;background-color:azure}.bi-pencil-fill{margin-left:6%}#dokme{margin-left:30%;margin-top:50px}#back{margin-left:40%}.i{color:wheat;margin-left:10%}#div{font-size:50px}#a{color:#fff}#i2{color:#f0f8ff} 
+#div,
+.i {
+    background-color: #000
+}
+
+body {
+    background-color: #5f9ea0 ; 
+    font-family: "Baskervville SC", serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+#mama {
+    background-color: #6f777e
+}
+
+table,
+td,
+th {
+    border: 1px solid #000;
+    border-collapse: collapse
+}
+
+table {
+    width: 100%;
+    background-color: azure
+}
+
+.bi-pencil-fill {
+    margin-left: 6%
+}
+
+#dokme {
+    margin-left: 30%;
+    margin-top: 50px
+}
+
+#back {
+    margin-left: 40%
+}
+
+.i {
+    color: wheat;
+    margin-left: 10%
+}
+
+#div {
+    font-size: 50px
+}
+
+#a {
+    color: #fff
+}
+
+#i2 {
+    color: #f0f8ff
+}

@@ -1,6 +1,12 @@
 body{
     background-color: #121212 !important;
     color: #ffffff;
+    
+        font-family: "Baskervville SC", serif;
+        font-weight: 400;
+        font-style: normal;
+      
+      
 }
 
 /* start nav section */
