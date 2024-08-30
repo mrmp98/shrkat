@@ -1,4 +1,5 @@
 <?php 
+// this is bog 
 require_once __DIR__ . "../m/amal_ha.PHP" ; 
 class Allowing extends amal_ha
  {
