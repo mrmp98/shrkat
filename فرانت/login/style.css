@@ -9,7 +9,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(images/multi/slide/slide-1.jpg);
+    background: url(slide-1.jpg);
     background-size: cover;
     background-position: center;
 }
