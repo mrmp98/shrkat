@@ -2,36 +2,64 @@
  require_once __DIR__ . '/../../c/edit_to_post.php' ; 
  $qw = new added() ; 
  ?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap" rel="stylesheet">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+   <!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <style>
-body {
-    font-family: "Baskervville SC", serif;
-        font-weight: 400;
-        font-style: normal;
-    
-  }
+    *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.195) !important;
+}
+/* start nav section */
+.nav-img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+}
+/* end nav section */
 </style>
-<body style="text-align: center;">
-    <div> <h1><?php $qw->qw(0 , 'titel');   ?></h1></div>
-    <div style=" word-wrap: break-word;overflow-wrap: break-word; width: 100%; ">
-    <?php $qw->qw(0 , 'mtn'); ?>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-   <a href="../syt"><BUtton type="submit">بازگشت</BUtton></a>
+<body>
+    
+    <nav style="text-align: center;">
+        <div class="row d-flex justify-content-center ">
+            <div class="col-8 bg-dark" dir="rtl" >
+ 
+                    <li class="nav-item d-flex" >
+                        <h5 class="text-white mt-2" > <?php $qw->qw(0 , 'titel');?> </h5>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ 
+    <section>
+        <div class="row d-flex justify-content-center mt-1">
+            <div class="col-10 bg-black">
+                <h3 class="text-center text-white mt-3"><?php $qw->qw(0 , 'mtn'); ?></p>
+                <a href="../syt"><BUtton type="submit">بازگشت</BUtton></a>
+
+            </div>
+        </div>
+    </section>
+    <!-- end header section -->
 </body>
 </html>

@@ -1,12 +1,7 @@
 body{
-    background-color: #121212 !important;
+    overflow-x: hidden !important;
+    background-color: #121212 !important ;
     color: #ffffff;
-    
-        font-family: "Baskervville SC", serif;
-        font-weight: 400;
-        font-style: normal;
-      
-      
 }
 
 /* start nav section */
@@ -23,32 +18,24 @@ body{
     position: relative;
     bottom: 3px;
 }
+.nav-bg{
+    background-color: gray !important;
+}
 /* end nav section */
 
 /* start header section */
-header section div{
-    width: 100%;
+header{
     height: 50vh;
-    background-image: url('images/public/header.jpg');
-    background-size: cover;
+    background: url(images/multi/slide/slide-1.jpg) !important;
     background-position: center;
-    border-radius: 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.header-box{
+    margin-top: 160px;
 }
 .header-btn{
-    height: 35px;
-    margin-top: 25vh;
-}
-.header-h2{
-    margin-top: 30vh;
-    margin-right: -28vh;
-}
-.header-p{
-    margin-top: 37vh;
-    margin-right: -56vh;
-}
-.header-span{
-    margin-top: 43vh;
-    margin-right: -78vh;
+    width: auto;
 }
 /* end header section */
 .all-line{
@@ -81,3 +68,23 @@ header section div{
     left: 80px;
 }
 /* end first news */
+
+/* start pagination */
+.pagination {
+    display: inline-block;
+}
+.pagination a {
+    color: white;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+.pagination a.active {
+    background-color: rgb(66, 0, 66);
+    color: rgb(161, 128, 180)e;
+}
+.pagination a:hover:not(.active) {
+    background-color: #5c3491;
+}
+/* end pagination */

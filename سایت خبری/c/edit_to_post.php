@@ -30,8 +30,9 @@ class added extends amal_ha
         
        $p[] =  $this->selekt(5 , $this->get() ) ;
         
+        
         print_r($p[0][$r][$r2]) ;
-           
+        
     }
     public function get ()  
     {

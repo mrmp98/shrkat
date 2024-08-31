@@ -38,53 +38,39 @@ class safe  extends amal_ha
          { 
             
             print_r("
-    <a href='../seene/index.php?id={$p[0][$i]['id']}'>
-        
-            <div class='container'>
-            <div class='row'>
-                <div class='col-12  mt-3 d-flex'>
-                <h4 class='mt-3 text-white bi bi-card-text y'> " . $p[0][$i]['titel'] . "</h4>
-                <i class='bi bi-chat-dots-fill'></i>    
-                <div class='col-6  d-flex justify-content-around post' style='color : white'>      
-                            <p class='text-white'dir='rtl'>
-                           " . $p[0][$i]['mtn'] . "
-                            </p>                      
-                    </div>
-                    <div class='col-6 ' dir='rtl'>
-                        <div class='d-flex'>
-                            <button class='btn btn-primary d-flex'>
-                                <i class='bi bi-circle-fill ms-2'></i>
-                                <h6>" .$this->selektt(1 , $p[0][$i]['daste_bandi']). "</h6>
-                            </button>
+    <section>
+        <div class='row'>
+            <div class='col-12  mt-3 d-flex'>
+                <div class='col-6  d-flex justify-content-around'>
+
+                <a href='../seene/index.php?id={$p[0][$i]['id']}'class='text-decoration-none'>
+                    <div class='text-decoration-none' href='>
+                        <h5 class='text-white containerr' id='p' dir='rtl'>
+                        " .$p[0][$i]['mtn'] .  "
+                        </h5>
                         </div>
-                        <span class='d-flex'>
-                            <h6 class='text-white me-3 bi bi-person'>" .$this->selektt(3,$p[0][$i]['user'])['user']. "</h6>
-                            <h6 class='text-white me-3 dete-section'>" . $p[0][$i]['zman'] . "</h6>
-                            <h5 class='text-white me-3 mt-1 time-section'><i class='bi bi-clock ms-2'></i>" .$this->calculateReadingTime($p[0][$i]['mtn']). "</h5>
-                        </span>
+                        </a>
+                        </div>
+                <div class='col-6 ' dir='rtl'>
+                    <div class='d-flex'>
+                        <button class='btn btn-primary d-flex'>
+                            <i class='bi bi-circle-fill ms-2'></i>
+                            <h6> " . $this->selektt(1 , $p[0][$i]['daste_bandi']) . "</h6>
+                        </button>
                     </div>
+                    <h4 class='mt-3 text-white'>" . $p[0][$i]['titel'] . "</h4>
+                    <span class='d-flex'>
+
+                        <h6 class='text-white me-3 '>" .$this->selektt(3,$p[0][$i]['user'])['user'] . "</h6>
+                        <h6 class='text-white me-4 dete-section'>1403/4/21</h6>
+                        <h6 class='text-white time-section'><i class='bi bi-clock fs-5 ms-1'></i> " .$this->calculateReadingTime($p[0][$i]['mtn']) . "
+                            </h5>
+                    </span>
                 </div>
             </div>
-        </div>
-        <hr style='color : white'>
-        </a>
-         <script>
-        function truncateText(element, length) {
-    let text = element.textContent;
-    let truncatedText = '...' + text.slice(0, length) ;
-    return truncatedText;
-}
-
-let postElements = document.querySelectorAll('.y');
-
-postElements.forEach(postElement => {
-    let truncatedText = truncateText(postElement,1);
-    postElement.innerHTML = truncatedText;
-    
-});
-     </script>
+    </section>    
+            <hr>
         ");
-                  
         }
     }
     }

@@ -1,13 +1,16 @@
-function truncateText(element, length) {
-    let text = element.textContent;
-    let truncatedText = "..." + text.slice(0, length) ;
-    return truncatedText;
+function truncateText(text) {
+    // بررسی طول متن
+    if (text.length >= 5) {
+        // برش متن و اضافه کردن سه نقطه
+        return text.slice(0, 5) + '...';
+    }
+    // اگر طول متن ۵ کاراکتر یا کمتر باشد، متن را همان‌طور که هست برمی‌گرداند
+    return text;
 }
 
-let postElements = document.querySelectorAll(".post");
+// مثال استفاده
+const inputText =document.querySelector('.truncate').innerHTML;
+const truncatedText = truncateText(inputText);
+console.log(truncatedText);
 
-postElements.forEach(postElement => {
-    let truncatedText = truncateText(postElement,50);
-    postElement.innerHTML = truncatedText;
     
-});

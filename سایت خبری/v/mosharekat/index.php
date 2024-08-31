@@ -23,11 +23,19 @@ body {
     font-style: normal;
     text-align: center;
   }
+  #icone{
+    font-size: 50px;
+    color: wheat; 
+    position: absolute;
+    margin-left: -650px;
+    margin-top: -130px;
+}
 </style>
 <body>
     <p>  ادمین عزیز خوش امدید </p>
     <div id="div"><a id="a" href="../aded/index.php"><i id="i2" class="bi bi-cloud-plus"></i> افزودن پست </a></div>
-
+    <a href="../allow/index.php">
+    <i id="icone" class="bi bi-person-circle"></i></a>
     <div id="mama">
     <table id="mymediya">
     <tr>

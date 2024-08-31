@@ -69,6 +69,25 @@
          </div>
      </footer>
      <script src="js.js"></script>
+     <script>
+function truncateText() {
+    // انتخاب همه عناصر با id 'p' (توجه: id باید یکتا باشد، بنابراین ممکن است نیاز به استفاده از کلاس باشد)
+    var elements = document.querySelectorAll('#p'); 
+    
+    // بررسی طول متن
+    elements.forEach(element => {
+        var text = element.innerHTML; // دریافت متن هر عنصر
+        
+        
+                element.innerHTML = text.slice(0, 500) + '...'; 
+        
+    });
+}
+
+// فراخوانی تابع
+truncateText();
+        
+     </script>
     
  </body>
 
