@@ -2,10 +2,6 @@
  require_once __DIR__ . '/../../c/edit_to_post.php' ; 
  $qw = new added() ; 
  ?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,7 +41,10 @@ body{
  
                     <li class="nav-item d-flex" >
                         <h5 class="text-white mt-2" > <?php $qw->qw(0 , 'titel');?> </h5>
+                        
                     </li>
+                    <h5 class="text-white mt-2" > <?php $qw->qw(0 , 'seen');?> تعداد بازدید  </h5>
+                    <h5 class="text-white mt-2" > <?php $qw->user($qw->qqw(0,'user'));?> نویسنده  </h5>
                 </ul>
             </div>
         </div>

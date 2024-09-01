@@ -1,5 +1,5 @@
 <?php
-require __DIR__ .  '/../vendor/autoload.php';
+require_once __DIR__ .  '/../vendor/autoload.php';
 require_once __DIR__ . "/../m/amal_ha.PHP" ;
 use Morilog\Jalali\Jalalian;
 use Carbon\Carbon; 
@@ -7,8 +7,7 @@ class Safe extends Amal_Ha
 {
     public function __construct()
     {
-        // $this->format('2024-05-08') ; 
-        // exit ; 
+        
         parent::__construct();
         $this->seen();
     }

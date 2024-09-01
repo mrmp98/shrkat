@@ -157,7 +157,7 @@ class amal_ha extends connect
                 return $result['id'];
             }
             if($r == 5){
-                $stmt = $this->conn->prepare("SELECT `mtn` , `titel` FROM `post` WHERE id = $r2;");
+                $stmt = $this->conn->prepare("SELECT `mtn` , `titel` , `seen`, `user` FROM `post` WHERE id = $r2;");
                 $stmt->execute();
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 
@@ -170,9 +170,21 @@ class amal_ha extends connect
         }
     }
 
-    public  function update($table_name, $id = null,  $r1 = null, $r2 = null)
+    public  function update($table_name, $id = null,  $r1 = null, $r2 = null ,  $r3 = null)
     {
-        try {
+        if($r1 == 2) {
+            $sql = "UPDATE $table_name SET seen = $r2 WHERE id = $id";
+            $stmt = $this->conn->prepare($sql);
+            
+            if ($stmt->execute()) {
+
+               
+            } else {
+                echo "خطا در به‌روزرسانی اطلاعات: " . print_r($stmt->errorInfo(), true);
+            }
+            return ; 
+        }
+        if($r3==3){
             $sql = "UPDATE $table_name SET mtn = :mtn, titel = :titel WHERE id = $id";
             $stmt = $this->conn->prepare($sql);
             $stmt->bindParam(':mtn', $r1);
@@ -184,8 +196,8 @@ class amal_ha extends connect
             } else {
                 echo "خطا در به‌روزرسانی اطلاعات: " . print_r($stmt->errorInfo(), true);
             }
-        } catch (PDOException $e) {
-            echo "Connection failed: " . $e->getMessage();
+
         }
+       
     }
 }
