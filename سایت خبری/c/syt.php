@@ -1,12 +1,56 @@
 <?php
 require_once __DIR__ . "/../m/amal_ha.PHP" ; 
-class safe  extends amal_ha
+class Safe extends Amal_Ha
 {
     public function __construct()
     {
         parent::__construct();
-        $this->seen() ; 
+        echo $this->convertDate('2024-08-05');
+        exit;
+        $this->seen();
     }
+
+    public function gregorianToJalali($gy, $gm, $gd) {
+        // محاسبه سال شمسی
+        $g_days_in_month = [31, 28 + (checkdate($gm, $gd, $gy) ? 0 : 1), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        $g_day_no = array_sum(array_slice($g_days_in_month, 0, $gm - 1)) + $gd - 1;
+        $g_year_no = $gy - 1600;
+        $g_day_no += 365 * $g_year_no + floor(($g_year_no + 3) / 4) - floor(($g_year_no + 99) / 100) + floor(($g_year_no + 399) / 400);
+
+        // محاسبه تاریخ شمسی
+        $j_day_no = $g_day_no - 226899;
+        $j_np = floor($j_day_no / 1029983);
+        $j_day_no %= 1029983;
+
+        $j_year = 474 + 2820 * $j_np;
+        $j_day_no += 226899;
+
+        $j_year += floor($j_day_no / 365);
+        $j_day_no %= 365;
+
+        if ($j_day_no < 186) {
+            $j_month = floor($j_day_no / 31) + 1;
+            $j_day = $j_day_no % 31 + 1;
+        } else {
+            $j_month = floor(($j_day_no - 186) / 30) + 7;
+            $j_day = ($j_day_no - 186) % 30 + 1;
+        }
+
+        return [$j_year, $j_month, $j_day];
+    }
+
+    public function convertDate($dateString) {
+        // تجزیه تاریخ ورودی به سال، ماه و روز
+        list($gy, $gm, $gd) = explode('-', $dateString);
+        
+        // تبدیل به تاریخ شمسی
+        list($jy, $jm, $jd) = $this->gregorianToJalali((int)$gy, (int)$gm, (int)$gd);
+        
+        // فرمت خروجی
+        return sprintf("%04d/%02d/%02d", $jy, $jm, $jd);
+    }        
+    
+   
     public function calculateReadingTime($text) {
         $wordsPerMinute = 200; // تعداد کلمات در دقیقه
         
@@ -19,11 +63,10 @@ class safe  extends amal_ha
         $seconds = round($minutes * 60);
         
         $r =  [
-            'minutes' => floor($minutes),
-            'seconds' => $seconds % 60
+            'minutes' => floor($minutes)
         ];
         $readingTime = $r;
-        $qw = "زمان خواندن: {$readingTime['minutes']} دقیقه و {$readingTime['seconds']} ثانیه";
+        $qw = "زمان خواندن: {$readingTime['minutes']} دقیقه ";
         return $qw;
     }
     public function selektt($w , $w2)
@@ -75,4 +118,5 @@ class safe  extends amal_ha
     }
     }
 $safe = new safe() ; 
+ 
  
