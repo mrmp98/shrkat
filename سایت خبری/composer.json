@@ -1,5 +1,6 @@
 {
     "require": {
-        "fzaninotto/faker": "^1.5"
+        "nesbot/carbon": "^3.8",
+        "morilog/jalali": "^3.4"
     }
 }
