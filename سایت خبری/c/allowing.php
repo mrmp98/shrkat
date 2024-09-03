@@ -24,12 +24,12 @@ class Allowing extends amal_ha
         print_r(
             "<tr>
             <th>
-    <i style='border: 5px solid red ;  ' class='bi bi-x'></i>
-    <i style='border: 5px solid red ; margin-left: 30px;' class='bi bi-check-lg'></i>
+    <i id=" . $x[0][$i]['id']  . " style='border: 5px solid red ;  ' class='bi bi-x'></i>
+    <i  " .   $x[0][$i]['id']  . " style='border: 5px solid red ; margin-left: 30px;' class='bi bi-check-lg'></i>
             </th>
-            <th>" . $x[0][$i]['mtn'] .  " </th>
-            <th>" . $x[0][$i]['titel'] .  " </th>
-            <th>" . $this->user(3 ,$x[0][$i]['user'] ,'user')  .  " </th>
+                <th> <a href='../seen/index.php?id={$x[0][$i]['id']}'>" . $x[0][$i]['mtn'] .  " </a></th>
+                <th> <a href='../seen/index.php?id={$x[0][$i]['id']}'>" . $x[0][$i]['titel'] .  " </th>
+                <th>" . $this->user(3 ,$x[0][$i]['user'] ,'user')  .  " </th>
             <th> ". $x[0][$i]['zman']  . " </th>
             <th>" . $this->selekt(1,$x[0][$i]['daste_bandi'])  . " </th>
         </tr>"

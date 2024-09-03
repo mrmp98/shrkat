@@ -16,7 +16,7 @@
     }
     table , th , td{
         border: 5px solid rgb(0, 0, 0);
-        width: 50%; 
+        width: 60%; 
         background-color: rgb(255, 255, 255);
         color: rgb(0, 0, 0);
     }
@@ -37,6 +37,6 @@
     
         
     </table>
-            
+           <script></script> 
 </body>
 </html>

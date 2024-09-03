@@ -53,9 +53,6 @@ class amal_ha extends connect
     }
     public function dell($table_name, $id)
     {
-        // لیست سفید برای نام جدول
-
-
         try {
             $sql = "DELETE FROM $table_name WHERE id = :id";
             $stmt =   $this->conn->prepare($sql);
@@ -205,6 +202,18 @@ class amal_ha extends connect
             }
 
         }
+        if($r2== 4){
+            $sql = "UPDATE $table_name SET vaziyat = :vaziyat  WHERE id = $id";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bindParam(':vaziyat', $r1);
+
+            if ($stmt->execute()) {
+
+                echo "اطلاعات با موفقیت به‌روزرسانی شد.";
+            } else {
+                echo "خطا در به‌روزرسانی اطلاعات: " . print_r($stmt->errorInfo(), true);
+            }
        
     }
+}
 }
