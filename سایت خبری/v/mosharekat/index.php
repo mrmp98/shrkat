@@ -35,7 +35,8 @@ body {
     <p>  ادمین عزیز خوش امدید </p>
     <div id="div"><a id="a" href="../aded/index.php"><i id="i2" class="bi bi-cloud-plus"></i> افزودن پست </a></div>
     <a href="../allow/index.php">
-    <i id="icone" class="bi bi-person-circle"></i></a>
+        <?php session_start() ;  echo ($_SESSION['vaziyat']== 'admin') ? "<i id='icone' class='bi bi-person-circle'></i></a>" : '' ;  ?>
+    
     <div id="mama">
     <table id="mymediya">
     <tr>

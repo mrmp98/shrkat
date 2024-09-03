@@ -1,6 +1,6 @@
 <?php
  require_once __DIR__ . '/../m/amal_ha.PHP';
-session_start() ; 
+
  class admin extends amal_ha
  { 
      public $p = [] ; 
@@ -12,12 +12,6 @@ session_start() ;
        $this->conn = null ; 
 
     }
-    public function js($r)
-    {
-        echo "<script>$r</script>"; 
-    }
-    
-   
     public function daste_bandi($r , $r2)
     {
        return $this->selekt($r , $r2);
