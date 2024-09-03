@@ -164,6 +164,12 @@ class amal_ha extends connect
                 
                 return ($result);
             }
+            if ($r == 6) {
+                $stmt = $this->conn->prepare('SELECT * FROM `post` WHERE   `vaziyat`= 0');
+                $stmt->execute();
+                $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                return $result;    
+            }
             $stmt = $this->conn->prepare('SELECT * FROM `post` WHERE   `vaziyat`= 1');
             $stmt->execute();
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);

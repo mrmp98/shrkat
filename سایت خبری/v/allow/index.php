@@ -1,4 +1,3 @@
-<?php require_once __DIR__ . "/../../c/allowing.php" ; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +16,7 @@
     }
     table , th , td{
         border: 5px solid rgb(0, 0, 0);
-        width: 50%;
+        width: 50%; 
         background-color: rgb(255, 255, 255);
         color: rgb(0, 0, 0);
     }
@@ -28,12 +27,14 @@
 
             <th>وضعیت</th>
             <th>متن</th>
-            <th>مشاهده</th>
+            
             <th>تایتل</th>
             <th>نویسنده</th>
             <th>تاریخ انتشار</th>
+            <th>دسته بندی</th>
         </tr>
-   
+<?php require_once __DIR__ . "/../../c/allowing.php" ; ?>
+    
         
     </table>
             
