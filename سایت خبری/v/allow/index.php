@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . "/../../m/amal_ha.PHP" ; ?>
+<?php require_once __DIR__ . "/../../c/allowing.php" ; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,17 +33,7 @@
             <th>نویسنده</th>
             <th>تاریخ انتشار</th>
         </tr>
-        <tr>
-            <th>
-    <i style="border: 5px solid red ;" class="bi bi-x"></i>
-    <i style="border: 5px solid red ; margin-left: 30px;" class="bi bi-check-lg"></i>
-            </th>
-            <th>متنش</th>
-            <th>ممشاهده</th>
-            <th>تایتلش</th>
-            <th>نویسنده</th>
-            <th>تاریخ انتشار</th>
-        </tr>
+   
         
     </table>
             
