@@ -22,18 +22,7 @@
     <li class="dropdown-item">خاورمیانه</li>
 </ul>
 
-<script>
-  // انتخاب همه عناصر dropdown-item
-  var items = document.querySelectorAll('.dropdown-item');
-  var dropdownToggle = document.querySelector('.dropdown-toggle');
-  
-  items.forEach(function(item) {
-    item.addEventListener('click', function() {
-        (this.innerHTML);     
-      dropdownToggle.innerHTML = this.innerHTML; 
-        });
-  });
-</script>
+
 
     <br>
     <br>
@@ -41,11 +30,12 @@
     <div>
         </div>
         <br>
-        <br>
+        <br>    
         <br>
         <br>
         <div id="post">
             <form method="post">
+                <input id="vorodi" name="dastebandi" type="hidden" value="1">
             <input type="text" name="qwasd" placeholder="title">
             <br>
             <br>
@@ -59,6 +49,19 @@
     
 
     <script src="index.js"></script>
-    
+    <script>
+  var items          = document.querySelectorAll('.dropdown-item');
+  var dropdownToggle = document.querySelector('.dropdown-toggle') ;
+  var vorodi         = document.querySelector('#vorodi')          ;         
+  
+  items.forEach(function(item) {
+    item.addEventListener('click', function() {
+        vorodi.value = (this.innerHTML);     
+
+      dropdownToggle.innerHTML = this.innerHTML; 
+      console.clear() ; 
+        });
+  });
+</script>
 </body>
 </html>

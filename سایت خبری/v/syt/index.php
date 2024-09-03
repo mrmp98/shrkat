@@ -15,7 +15,7 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
  </head>
 
- <body>
+ <body style="color: white;">
      <nav>
          <div class="container">
              <div class="row">
@@ -61,7 +61,7 @@
                              <a href="" class="text-decoration-none fs-3 text-dark">qw</a>
                          </div>
                          <div>
-                             <h4 class="text-dark mt-1">غتنفغنفنفتسننع</h4>
+                             <h4 class="text-dark mt-1">دانشجویار</h4>
                          </div>
                      </div>
                  </div>
@@ -71,12 +71,12 @@
      <script src="js.js"></script>
      <script>
 function truncateText() {
-    // انتخاب همه عناصر با id 'p' (توجه: id باید یکتا باشد، بنابراین ممکن است نیاز به استفاده از کلاس باشد)
+ 
     var elements = document.querySelectorAll('#p'); 
     
-    // بررسی طول متن
+  
     elements.forEach(element => {
-        var text = element.innerHTML; // دریافت متن هر عنصر
+        var text = element.innerHTML; 
         
         
                 element.innerHTML = text.slice(0, 500) + '...'; 

@@ -94,10 +94,10 @@ class amal_ha extends connect
             echo "Connection failed: " . $e->getMessage();
         }
     }
-    public function add_to_post($table_name, $user, $mtn, $edit, $like, $dastebandi, $titel, $seen)
+    public function add_to_post($table_name, $user, $mtn, $edit, $like, $dastebandi, $titel, $seen , $vaziyat)
     {
         try {
-            $sql = "INSERT INTO $table_name (user, mtn, edit , count_like , daste_bandi , titel , seen ) VALUES (:user, :mtn, :edit, :liike , :dastebandi ,:titel ,:seen)";
+            $sql = "INSERT INTO $table_name (user, mtn, edit , count_like , daste_bandi , titel , seen , vaziyat ) VALUES (:user, :mtn, :edit, :liike , :dastebandi ,:titel ,:seen , :vaziyat)";
             $stmt = $this->conn->prepare($sql);
             $stmt->bindParam(':user', $user);
             $stmt->bindParam(':mtn', $mtn);
@@ -105,6 +105,7 @@ class amal_ha extends connect
             $stmt->bindParam(':liike', $like);
             $stmt->bindParam(':dastebandi', $dastebandi);
             $stmt->bindParam(':titel', $titel);
+            $stmt->bindParam(':vaziyat', $vaziyat);
             $stmt->bindParam(':seen', $seen);
 
             if ($stmt->execute()) {
@@ -163,7 +164,7 @@ class amal_ha extends connect
                 
                 return ($result);
             }
-            $stmt = $this->conn->prepare('SELECT * FROM `post` WHERE 1 = 1');
+            $stmt = $this->conn->prepare('SELECT * FROM `post` WHERE   `vaziyat`= 1');
             $stmt->execute();
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             return $result;

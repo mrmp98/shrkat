@@ -7,7 +7,7 @@
     public function __construct()
     {
         parent::__construct() ;
-        // this is bog 
+   
       $this->seen() ; 
        $this->conn = null ; 
 
@@ -18,7 +18,7 @@
     }
     public function chek_vaziyat()
     {
-        // this is bog  
+         
         if($_SESSION['vaziyat']== 'admin'){
 
            return $this->p[] = $this->selekt();

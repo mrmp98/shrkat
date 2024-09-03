@@ -5,6 +5,7 @@
  class addqw  extends amal_ha
  {
    use amniyat ; 
+    public $mozo = [''  , 'ورزشی' , 'سیاسی' , 'خاورمیانه'] ; 
     public function __construct()
     {
       parent::__construct() ; 
@@ -16,6 +17,16 @@
       $this->selekt() ; 
       
     }
+    public function mozoe($r)
+    {
+      $r = array_search($r , $this->mozo) ; 
+      if($r)
+      {
+        return $r ; 
+      }else{
+        die('هک کار درستی نیست ')  ; 
+      }
+    }
     public function add()
     {
        echo $this->getid() ;    
@@ -26,16 +37,17 @@
          {
           
           $e =   $this->selekt(4, $_SESSION['username']) ;
-        
+          
           }else{
           
             $e =  $this->selekt(4,$_SESSION['name'])  ; 
 
           }               
-               $mytextarea =  $this->xss($_POST['myTextarea'],FILTER_SANITIZE_SPECIAL_CHARS) ; 
-               $qwasd =       $this->xss($_POST['qwasd'],FILTER_SANITIZE_SPECIAL_CHARS) ; 
+        $mozoo       =  $this->xss($this->mozoe($_POST['dastebandi']),FILTER_SANITIZE_SPECIAL_CHARS);     
+        $mytextarea =  $this->xss($_POST['myTextarea'],FILTER_SANITIZE_SPECIAL_CHARS) ; 
+        $qwasd      =  $this->xss($_POST['qwasd'],FILTER_SANITIZE_SPECIAL_CHARS) ; 
                 
-                    $this->add_to_post('post' ,  $e , $mytextarea , 1 , 1 , 1 , $qwasd , 1) ;
+                    $this->add_to_post('post' ,  $e , $mytextarea , 1 , 1 , $mozoo , $qwasd , 1 , 0) ;
                     header('Location: ../mosharekat/');
                                
         
