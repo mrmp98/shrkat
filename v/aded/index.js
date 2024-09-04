@@ -15,8 +15,9 @@ var submit = document.querySelector("#submit");
 
             if(myTextarea.trim() === '' || selectedText.trim() === 'انتخاب موضوع') {
                 alert('لطفا تمام اینپوت هارا پر کنید');
-            } else {
-                // اینجا می‌توانید عملی که می‌خواهید انجام دهید را اضافه کنید
+            } else 
+            {
+               
                
             }
         });

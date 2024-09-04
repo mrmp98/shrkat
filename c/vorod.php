@@ -38,7 +38,8 @@ class qw extends amal_ha
       {
           echo '<script>alert("لطفاً نام کاربری را وارد کنید")</script>';
       }
-  } else {
+  } else 
+  {
       echo '<script>alert("فرم ارسال نشده است")</script>';
   }
   }

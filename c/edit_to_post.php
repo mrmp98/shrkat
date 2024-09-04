@@ -2,6 +2,7 @@
 // this is bog 
 require_once __DIR__ . "/../m/amal_ha.PHP";
 require_once __DIR__ . "/amniyat.php";
+
 class added extends amal_ha
 {
     use  amniyat;
@@ -16,7 +17,7 @@ class added extends amal_ha
         if (isset($_POST['submmit'])) {
             $text =  $_POST['myTextarea'];
             $titel =  $_POST['qwasd'];
-            $this->update('post', $this->get(), $this->xss($text, FILTER_SANITIZE_SPECIAL_CHARS), $this->xss($titel, FILTER_SANITIZE_SPECIAL_CHARS) , 3);
+            $this->update('post', $this->get(), $this->xss($text, FILTER_SANITIZE_SPECIAL_CHARS), $this->xss($titel, FILTER_SANITIZE_SPECIAL_CHARS) , 3 ,($this->qqw(0,'edit'))+1 );
             $this->conn = null;
             header('location:../mosharekat/');
             exit;
@@ -36,8 +37,6 @@ class added extends amal_ha
 
         $p[] =  $this->selekt(5, $this->get());
 
-
-        
         return $p[0][$r][$r2] ; 
     }
     public function user($r2)

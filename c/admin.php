@@ -19,10 +19,12 @@
     public function chek_vaziyat()
     {
          
-        if($_SESSION['vaziyat']== 'admin'){
+        if($_SESSION['vaziyat']== 'admin')
+        {
 
            return $this->p[] = $this->selekt();
-        }else{
+        }else
+        {
            return $this->p[] =$this->selekt(2 ,13 );
             
         }

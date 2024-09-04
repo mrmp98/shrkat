@@ -23,7 +23,8 @@
       if($r)
       {
         return $r ; 
-      }else{
+      }else
+      {
         die('هک کار درستی نیست ')  ; 
       }
     }
@@ -38,7 +39,8 @@
           
           $e =   $this->selekt(4, $_SESSION['username']) ;
           
-          }else{
+          }else
+          {
           
             $e =  $this->selekt(4,$_SESSION['name'])  ; 
 
