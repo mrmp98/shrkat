@@ -86,14 +86,7 @@ body {
     
     
 }
-function  edit(){
-    let o =document.querySelectorAll('.edit') ; 
-    o.forEach(oo=>{
-        oo.addEventListener('click' , function(){
-            localStorage
-        })
-    })
-}
+
 api() ; 
 </script>
     <script src="../../c/EROR.js"></script>

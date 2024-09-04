@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . '/../../../سایت خبری/c/vorod.php'; ?>
+<?php require_once __DIR__ . '/../../c/vorod.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

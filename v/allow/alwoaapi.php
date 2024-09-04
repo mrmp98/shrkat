@@ -9,3 +9,4 @@ class qw extends amal_ha
         echo ($_SERVER['REQUEST_METHOD']=='POST' && $_POST['vaziyat']=='save') ?  $this->update('post' , $_POST['id'] ,1,4) :  $this->dell('post' , $_POST['id'])  ;        
     }
 }
+$R = new qw() ; 
