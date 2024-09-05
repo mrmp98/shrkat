@@ -1,23 +1,13 @@
-var submit = document.querySelector("#submit");
-        var dropdownItems = document.querySelectorAll(".dropdown-item");
-        var collapss = document.querySelector('#y'); 
 
-        dropdownItems.forEach(item => {
-            item.addEventListener("click", function () { 
-                collapss.innerHTML = this.textContent; 
-            });
-        });
+var items = document.querySelectorAll('.dropdown-item');
+var dropdownToggle = document.querySelector('.dropdown-toggle');
+var vorodi = document.querySelector('#vorodi');
 
-        submit.addEventListener("click", function(event) {
-            event.preventDefault();
-            var myTextarea = document.querySelector("#myTextarea").value;
-            var selectedText = collapss.innerHTML;
+items.forEach(function (item) {
+    item.addEventListener('click', function () {
+        vorodi.value = (this.innerHTML);
 
-            if(myTextarea.trim() === '' || selectedText.trim() === 'انتخاب موضوع') {
-                alert('لطفا تمام اینپوت هارا پر کنید');
-            } else 
-            {
-               
-               
-            }
-        });
+        dropdownToggle.innerHTML = this.innerHTML;
+        console.clear();
+    });
+});

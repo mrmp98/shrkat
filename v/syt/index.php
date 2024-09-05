@@ -7,8 +7,8 @@
      <title>Document</title>
      <link rel="stylesheet" href="style.css">
      <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap" rel="stylesheet">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap" rel="stylesheet">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
      <!-- Icons -->
@@ -69,26 +69,8 @@
          </div>
      </footer>
      <script src="js.js"></script>
-     <script>
-function truncateText() {
- 
-    var elements = document.querySelectorAll('#p'); 
-    
-  
-    elements.forEach(element => {
-        var text = element.innerHTML; 
-        
-        
-                element.innerHTML = text.slice(0, 500) + '...'; 
-        
-    });
-}
+     <script src="../../c/EROR.js"></script>
 
-// فراخوانی تابع
-truncateText();
-        
-     </script>
-    
  </body>
 
  </html>

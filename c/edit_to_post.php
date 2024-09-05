@@ -9,8 +9,8 @@ class added extends amal_ha
     public function __construct()
     {
         parent::__construct();
-        $this->seen() ; 
-        setcookie("id", $this->get(), time()+3600);
+        $this->seen();
+        setcookie("id", $this->get(), time() + 3600);
     }
     public function savee()
     {
@@ -18,7 +18,7 @@ class added extends amal_ha
         if (isset($_POST['submmit'])) {
             $text =  $_POST['myTextarea'];
             $titel =  $_POST['qwasd'];
-            $this->update('post', $this->get(), 3 , $this->xss($text, FILTER_SANITIZE_SPECIAL_CHARS), $this->xss($titel, FILTER_SANITIZE_SPECIAL_CHARS) ,($this->qqw(0,'edit'))+1 );
+            $this->update('post', $this->get(), 3, $this->xss($text, FILTER_SANITIZE_SPECIAL_CHARS), $this->xss($titel, FILTER_SANITIZE_SPECIAL_CHARS), ($this->qqw(0, 'edit')) + 1);
             $this->conn = null;
 
             header('location:../mosharekat/');
@@ -32,20 +32,19 @@ class added extends amal_ha
 
 
         print_r($p[0][$r][$r2]);
-         
     }
     public function qqw($r, $r2)
     {
 
         $p[] =  $this->selekt(5, $this->get());
 
-        return $p[0][$r][$r2] ; 
+        return $p[0][$r][$r2];
     }
     public function user($r2)
     {
-       $y[]= $this->selekt(3,$r2) ;
-    
-       echo  $y[0]['user'] ; 
+        $y[] = $this->selekt(3, $r2);
+
+        echo  $y[0]['user'];
     }
     public function get()
     {
@@ -54,11 +53,9 @@ class added extends amal_ha
     }
     public function seen()
     {
-    
-        $t[] =  $this->selekt();
-        $i = $t[0][0]['seen'] ; 
-        $this->update('post', $this->get(),2,$i+1 )  ;
-    
+
+        $t[] =  $this->selekt(8, $this->get());
+       
+        $this->update('post', $this->get(), 2, $t[0]['seen']+1);
     }
 }
-

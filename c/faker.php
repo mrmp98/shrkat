@@ -36,7 +36,7 @@ class qw  extends amal_ha
     public function insert()
     {
         for ($i = 0; $i <= 1000; $i++) {
-            $this->add_to_abot('abote', $this->name(), $this->password(), $this->email(), $this->phone(), 1) ;
+            $this->add_to_abot('abote', $this->name(), $this->password(), $this->email(), $this->phone(), 1);
         }
     }
 }

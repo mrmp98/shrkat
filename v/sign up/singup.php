@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . '/../../../سایت خبری/c/vorod.php'; ?>
+<?php require_once __DIR__ . '/../../c/vorod.php'; ?>
 
 
 <!DOCTYPE html>
@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -23,7 +23,7 @@
                     <div class="form-items">
                         <h3>signup</h3>
                         <p>اطلعات خود را وارد کنید </p>
-                        <form class="requires-validation" method= 'post' novalidate>
+                        <form class="requires-validation" method='post' novalidate>
                             <div class="col-md-12">
                                 <input class="form-control" type="text" name="name" placeholder="Full Name" required>
 

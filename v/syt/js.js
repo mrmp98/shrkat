@@ -9,8 +9,22 @@ function truncateText(text) {
 }
 
 // مثال استفاده
-const inputText =document.querySelector('.truncate').innerHTML;
+const inputText = document.querySelector('.truncate').innerHTML;
 const truncatedText = truncateText(inputText);
 console.log(truncatedText);
+function truncateText() {
 
-    
+    var elements = document.querySelectorAll('#p');
+
+
+    elements.forEach(element => {
+        var text = element.innerHTML;
+
+
+        element.innerHTML = text.slice(0, 500) + '...';
+
+    });
+}
+
+
+truncateText();

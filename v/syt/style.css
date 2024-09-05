@@ -1,78 +1,91 @@
-body{
+body {
     overflow-x: hidden !important;
-    background-color: #121212 !important ;
+    background-color: #121212 !important;
     color: #ffffff;
 }
 
 /* start nav section */
-.nav-icon{
+.nav-icon {
     color: rgba(128, 0, 128, 0.723);
     filter: drop-shadow(0px 0px 10px rgb(254, 0, 254)) !important;
 }
-.nav-img{
+
+.nav-img {
     width: 35px !important;
     height: 35px !important;
     border-radius: 50px;
 }
-.sign-icon{
+
+.sign-icon {
     position: relative;
     bottom: 3px;
 }
-.nav-bg{
+
+.nav-bg {
     background-color: gray !important;
 }
+
 /* end nav section */
 
 /* start header section */
-header{
+header {
     height: 50vh;
     background: url(images/multi/slide/slide-1.jpg) !important;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
-.header-box{
+
+.header-box {
     margin-top: 160px;
 }
-.header-btn{
+
+.header-btn {
     width: auto;
 }
+
 /* end header section */
-.all-line{
+.all-line {
     height: 1px;
 }
+
 /* start first news */
-.section-img{
+.section-img {
     width: 200px !important;
     height: 200px !important;
     border-radius: 5px;
     position: relative;
     right: 15px;
 }
+
 /* end first news */
 
 /* start first news */
-.profile-imgs{
+.profile-imgs {
     width: 50px;
     height: 50px;
     border-radius: 50px;
 }
-.dete-section{
+
+.dete-section {
     margin-top: 25px;
     position: relative;
     left: 95px;
 }
-.time-section{
+
+.time-section {
     position: relative;
     top: 20px;
     left: 80px;
 }
+
 /* end first news */
 
 /* start pagination */
 .pagination {
     display: inline-block;
 }
+
 .pagination a {
     color: white;
     float: left;
@@ -80,11 +93,14 @@ header{
     text-decoration: none;
     transition: background-color .3s;
 }
+
 .pagination a.active {
     background-color: rgb(66, 0, 66);
     color: rgb(161, 128, 180)e;
 }
+
 .pagination a:hover:not(.active) {
     background-color: #5c3491;
 }
+
 /* end pagination */
