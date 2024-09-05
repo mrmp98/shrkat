@@ -86,7 +86,7 @@ class amal_ha extends connect
 
             if ($stmt->execute()) 
             {
-                echo "اطلاعات با موفقیت وارد شد.";
+          
             } else
              {
                 echo "خطا در وارد کردن اطلاعات: " . $stmt->errorInfo();
@@ -113,7 +113,7 @@ class amal_ha extends connect
 
             if ($stmt->execute()) 
             {
-                echo "اطلاعات با موفقیت وارد شد.";
+           
             } else 
             {
                 echo "خطا در وارد کردن اطلاعات: " . $stmt->errorInfo();
@@ -173,8 +173,9 @@ class amal_ha extends connect
             {
                 $stmt = $this->conn->prepare("SELECT `mtn` , `titel` , `seen`, `user` , `edit` ,`count_like` FROM `post` WHERE id = $r2;");
                 $stmt->execute();
-                $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
+                $result = $stmt->fetchAll
+                (PDO::FETCH_ASSOC);
+                
                 return ($result);
             }
             if ($r == 6) 
@@ -184,10 +185,17 @@ class amal_ha extends connect
                 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 return $result;
             }
+            
             $stmt = $this->conn->prepare('SELECT * FROM `post` WHERE   `vaziyat`= 1');
             $stmt->execute();
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             return $result;
+        }
+        if($r == 7){
+            $stmt = $this->conn->prepare("SELECT `count_like` FROM `post` WHERE id = $r2;");
+            $stmt->execute();
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            return ($result);
         }
     }
 
@@ -200,57 +208,59 @@ class amal_ha extends connect
 
             if ($stmt->execute()) 
             {
+                
             } else 
             {
                 echo "خطا در به‌روزرسانی اطلاعات: " . print_r($stmt->errorInfo(), true);
             }
             return;
         }
-        if ($r3 == 3) 
+        if ($r1 == 5) 
+        {
+            $sql = "UPDATE $table_name SET 	count_like = :count_like  WHERE id = $id";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->bindParam(':count_like', $r2);
+
+            if ($stmt->execute()) 
+            {
+
+            
+            } else 
+            {
+                echo "خطا در به‌روزرسانی اطلاعات: " . print_r($stmt->errorInfo(), true);
+            }
+        }   
+        if ($r1 == 3) 
         {
             $sql = "UPDATE $table_name SET mtn = :mtn, titel = :titel ,edit = :edit WHERE id = $id";
             $stmt = $this->conn->prepare($sql);
-            $stmt->bindParam(':mtn', $r1);
-            $stmt->bindParam(':titel', $r2);
+            $stmt->bindParam(':mtn', $r2);
+            $stmt->bindParam(':titel', $r3);
             $stmt->bindParam(':edit', $r4);
 
             if ($stmt->execute()) 
             {
 
-                echo "اطلاعات با موفقیت به‌روزرسانی شد.";
+              
             } else 
             {
                 echo "خطا در به‌روزرسانی اطلاعات: " . print_r($stmt->errorInfo(), true);
             }
         }
-        if ($r2 == 4) 
+        if ($r1 == 4) 
         {
             $sql = "UPDATE $table_name SET vaziyat = :vaziyat  WHERE id = $id";
             $stmt = $this->conn->prepare($sql);
-            $stmt->bindParam(':vaziyat', $r1);
+            $stmt->bindParam(':vaziyat', $r2);
 
             if ($stmt->execute()) 
             {
 
-                echo "اطلاعات با موفقیت به‌روزرسانی شد.";
             } else 
             {
                 echo "خطا در به‌روزرسانی اطلاعات: " . print_r($stmt->errorInfo(), true);
             }
         }
-        if ($r2 == 5) 
-        {
-            $sql = "UPDATE $table_name SET 	count_like = :count_like  WHERE id = $id";
-            $stmt = $this->conn->prepare($sql);
-            $stmt->bindParam(':count_like', $r1);
-
-            if ($stmt->execute()) 
-            {
-                echo 'با موفقیت به روز شد '  ; 
-            } else 
-            {
-             
-            }
-        }
+        
     }
 }

@@ -10,6 +10,7 @@ class added extends amal_ha
     {
         parent::__construct();
         $this->seen() ; 
+        setcookie("id", $this->get(), time()+3600);
     }
     public function savee()
     {
@@ -17,8 +18,9 @@ class added extends amal_ha
         if (isset($_POST['submmit'])) {
             $text =  $_POST['myTextarea'];
             $titel =  $_POST['qwasd'];
-            $this->update('post', $this->get(), $this->xss($text, FILTER_SANITIZE_SPECIAL_CHARS), $this->xss($titel, FILTER_SANITIZE_SPECIAL_CHARS) , 3 ,($this->qqw(0,'edit'))+1 );
+            $this->update('post', $this->get(), 3 , $this->xss($text, FILTER_SANITIZE_SPECIAL_CHARS), $this->xss($titel, FILTER_SANITIZE_SPECIAL_CHARS) ,($this->qqw(0,'edit'))+1 );
             $this->conn = null;
+
             header('location:../mosharekat/');
             exit;
         }
@@ -52,8 +54,7 @@ class added extends amal_ha
     }
     public function seen()
     {
-        // echo $this->get() ;
-        //    $p[] =  $this->selekt(2 , $this->get()) ;
+    
         $t[] =  $this->selekt();
         $i = $t[0][0]['seen'] ; 
         $this->update('post', $this->get(),2,$i+1 )  ;
