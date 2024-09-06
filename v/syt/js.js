@@ -9,9 +9,7 @@ function truncateText(text) {
 }
 
 // مثال استفاده
-const inputText = document.querySelector('.truncate').innerHTML;
-const truncatedText = truncateText(inputText);
-console.log(truncatedText);
+
 function truncateText() {
 
     var elements = document.querySelectorAll('#p');

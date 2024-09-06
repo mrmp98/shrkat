@@ -21,7 +21,7 @@ function api() {
             $.ajax({
                 type: 'POST',
                 url: 'alwoaapi.php',
-                data: { id: pp.id, vaziyat: 'save' },
+                data: { id: pp.id, vaziyat: 'j' },
                 success: function (response) {
 
                     $('#response').html(response);

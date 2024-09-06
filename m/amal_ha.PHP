@@ -178,6 +178,15 @@ class amal_ha extends connect
                 $result = $stmt->fetch(PDO::FETCH_ASSOC);
                 return ($result); 
             }
+            if($r == 9)
+            {
+                $stmt = $this->conn->prepare("SELECT `count_post` FROM `abote` WHERE id = $r2;");
+                $stmt->execute();
+                $result = $stmt->fetch(PDO::FETCH_ASSOC);
+                if ($result['count_post'] == null) {
+                    return 1 ; }
+                return ($result);
+            }
             $stmt = $this->conn->prepare('SELECT * FROM `post` WHERE   `vaziyat`= 1');
             $stmt->execute();
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -235,5 +244,15 @@ class amal_ha extends connect
                 echo "خطا در به‌روزرسانی اطلاعات: " . print_r($stmt->errorInfo(), true);
             }
         }
+    if ($r1 == 6) {
+        $sql = "UPDATE $table_name SET 	count_post = :count_post  WHERE id = $id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':count_post', $r2);
+
+        if ($stmt->execute()) {
+        } else {
+            echo "خطا در به‌روزرسانی اطلاعات: " . print_r($stmt->errorInfo(), true);
+        }
+    }
     }
 }

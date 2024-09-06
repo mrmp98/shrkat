@@ -9,6 +9,7 @@ class addqw  extends amal_ha
   public function __construct()
   {
     parent::__construct();
+    
   }
   public function getid()
   {
@@ -35,11 +36,13 @@ class addqw  extends amal_ha
 
         $e =  $this->selekt(4, $_SESSION['name']);
       }
+      
       $mozoo       =  $this->xss($this->mozoe($_POST['dastebandi']), FILTER_SANITIZE_SPECIAL_CHARS);
       $mytextarea =  $this->xss($_POST['myTextarea'], FILTER_SANITIZE_SPECIAL_CHARS);
       $qwasd      =  $this->xss($_POST['qwasd'], FILTER_SANITIZE_SPECIAL_CHARS);
 
       $this->add_to_post('post',  $e, $mytextarea, 1, 1, $mozoo, $qwasd, 1, 0);
+      $this->update('abote' , $e , 6 , $this->selekt(9 , $e)['count_post']+1) ; 
       header('Location: ../mosharekat/');
     }
   }
